@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.menu-btn {
+  background-color: $red;
+  border: none;
+  padding: clamp(10px, 4.6728vw, 40px);
+  font-family: "Roboto", sans-serif;
+  font-size: $font22mob;
+  font-weight: 500;
+  color: $dark;
+  width: clamp(125px, 58.41vw, 500px);
+  margin-top: $m64mob;
+}

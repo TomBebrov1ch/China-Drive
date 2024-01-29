@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.header-mob {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: $m16mob;
+  &__img {
+    width: clamp(45px, 21.0276vw, 180px);
+    height: clamp(45px, 21.0276vw, 180px);
+  }
+  &__ham {
+    z-index: 1000;
+    position: absolute;
+  }
+}

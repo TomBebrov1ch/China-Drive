@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+// colors
+
+$red: #ed092d;
+$dark: #1e2f3d;
+$yellow: #fad706;
+
+// margins
+
+$m128: clamp(64px, 6.66624vw, 256px);
+$m64: clamp(32px, 3.33312vw, 128px);
+$m32: clamp(16px, 1.66656vw, 64px);
+$m16: clamp(8px, 0.83328vw, 32px);
+$m8: clamp(4px, 0.41664vw, 16px);
+
+$m128mob: clamp(64px, 29.90592vw, 256px);
+$m64mob: clamp(32px, 14.95296vw, 128px);
+$m32mob: clamp(16px, 7.47648vw, 64px);
+$m16mob: clamp(8px, 3.73824vw, 32px);
+$m8mob: clamp(4px, 1.86912vw, 16px);
+
+// fonts
+
+$font48: clamp(24px, 2.49984vw, 96px);
+$font29: clamp(14.5px, 1.51032vw, 58px);
+$font23: clamp(11.5px, 1.19784vw, 46px);
+$font21: clamp(10.5px, 1.09368vw, 42px);
+$font20: clamp(10px, 1.0416vw, 40px);
+$font18: clamp(9px, 0.93744vw, 36px);
+
+$font70mob: clamp(35px, 16.354799999999997vw, 140px);
+$font36mob: clamp(18px, 8.41104vw, 72px);
+$font32mob: clamp(16px, 7.47648vw, 64px);
+$font28mob: clamp(14px, 6.541919999999999vw, 56px);
+$font22mob: clamp(11px, 5.140079999999999vw, 44px);
+$font21mob: clamp(10.5px, 4.90644vw, 42px);
+$font20mob: clamp(10px, 4.6728vw, 40px);
+$font18mob: clamp(9px, 4.20552vw, 36px);
+$font17mob: clamp(8.5px, 3.9718799999999996vw, 34px);
+$font16mob: clamp(8px, 3.73824vw, 32px);
+$font14mob: clamp(7px, 3.2709599999999996vw, 28px);
