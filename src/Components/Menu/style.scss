@@ -3,7 +3,7 @@
 .menu {
   background-color: #ffff;
   width: 100%;
-  height: clamp(350px, 163.548vw, 1400px);
+  height: 100dvh;
   z-index: 100;
   position: absolute;
   top: 0;
@@ -11,12 +11,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  //   margin-top: clamp(75px, 35.046vw, 300px);
 
   &__item {
     margin-top: $m32mob;
     font-family: "Roboto", sans-serif;
     font-size: $font28mob;
     color: $dark;
+    position: relative;
+    bottom: clamp(50px, 23.363999999999997vw, 200px);
   }
 }

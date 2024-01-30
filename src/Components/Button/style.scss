@@ -3,11 +3,52 @@
 .menu-btn {
   background-color: $red;
   border: none;
-  padding: clamp(10px, 4.6728vw, 40px);
+  padding: clamp(7.5px, 3.5046vw, 30px);
   font-family: "Roboto", sans-serif;
   font-size: $font22mob;
   font-weight: 500;
   color: $dark;
   width: clamp(125px, 58.41vw, 500px);
-  margin-top: $m64mob;
+  position: relative;
+  bottom: clamp(17.5px, 8.177399999999999vw, 70px);
+}
+
+
+
+.main__btn {
+  background-color: #ffff;
+  border: 2px solid $dark;
+  padding: clamp(5px, 2.3364vw, 20px);
+  font-family: "Roboto", sans-serif;
+  font-size: $font22mob;
+  font-weight: 500;
+  color: $dark;
+  width: clamp(100px, 46.727999999999994vw, 400px);
+  margin-top: $m32mob;
+}
+
+.main__s__btn {
+  border: 2px solid $red;
+  padding: clamp(5px, 2.3364vw, 20px);
+  font-family: "Roboto", sans-serif;
+  font-size: $font22mob;
+  font-weight: 500;
+  color: $red;
+  background-color: $dark;
+  width: clamp(100px, 46.727999999999994vw, 400px);
+  margin-top: $m32mob;
+  margin-bottom: $m64mob;
+}
+
+.сontacts-btn {
+  background-color: $red;
+  border: none;
+  padding: clamp(7.5px, 3.5046vw, 30px);
+  font-family: "Roboto", sans-serif;
+  font-size: $font22mob;
+  font-weight: 500;
+  color: $dark;
+  width: clamp(125px, 58.41vw, 500px);
+  margin-top: $m32mob;
+  margin-bottom: $m64mob;
 }

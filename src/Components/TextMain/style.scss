@@ -1,2 +1,85 @@
-.text-main {
+@import '../../styles/variables.scss';
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $m64mob;
+    z-index: -3;
+
+    &__par {
+        color: $red;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: $font17mob;
+    }
+
+    &__nav {
+        font-family: "Roboto", sans-serif;
+        font-size: clamp(16px, 7.47648vw, 64px);
+        color: $dark;
+        font-weight: 700;
+        text-align: center;
+        width: 70%;
+        line-height: clamp(22.75px, 10.630619999999999vw, 91px);
+        margin-top: $m16mob;
+    }
+
+    &__second {
+        color: $dark;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: $font16mob;
+        text-align: center;
+        width: 50%;
+        line-height: clamp(12.5px, 5.840999999999999vw, 50px);
+        margin-top: $m16mob;
+    }
+
+    &__btn {}
+
+    &__car {
+        width: clamp(214px, 99.99792vw, 856px);
+        height: clamp(118px, 55.139039999999994vw, 472px);
+        position: absolute;
+        bottom: clamp(90px, 42.0552vw, 360px);
+        z-index: -3;
+    }
+
+    &__s {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: clamp(-200px, -93.45599999999999vw, -800px);
+        z-index: -10;
+        background-color: $dark;
+        padding-top: $m64mob;
+
+        &__nav {
+            font-family: "Roboto", sans-serif;
+            font-size: clamp(16px, 7.47648vw, 64px);
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+            width: 80%;
+            line-height: clamp(22.75px, 10.630619999999999vw, 91px);
+            margin-top: $m16mob;
+        }
+
+        &__second {
+            color: #ffffff;
+            font-family: "Roboto", sans-serif;
+            width: 75%;
+            text-align: center;
+            line-height: clamp(12.5px, 5.840999999999999vw, 50px);
+            font-size: $font16mob;
+            font-weight: 200;
+            margin-top: $m16mob;
+        }
+
+        &__btn {}
+    }
 }

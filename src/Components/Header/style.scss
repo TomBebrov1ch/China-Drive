@@ -12,10 +12,12 @@
   flex-direction: row;
   align-items: center;
   margin-top: $m16mob;
+
   &__img {
-    width: clamp(45px, 21.0276vw, 180px);
-    height: clamp(45px, 21.0276vw, 180px);
+    width: clamp(38.5px, 17.99028vw, 154px);
+    height: clamp(38.5px, 17.99028vw, 154px);
   }
+
   &__ham {
     z-index: 1000;
     position: absolute;
