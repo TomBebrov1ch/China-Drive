@@ -1,55 +1,145 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__main {
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(16px, 7.47648vw, 64px);
+    color: $dark;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    line-height: clamp(22.75px, 10.630619999999999vw, 91px);
+    margin-top: $m16mob;
+  }
+
+  &__main-span {
+    color: $red;
+  }
+
+  &__sec {
+    color: $dark;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: $font16mob;
+    text-align: center;
+    width: 70%;
+    line-height: clamp(12.5px, 5.840999999999999vw, 50px);
+    margin-top: $m16mob;
+  }
+
+  &__input {
+    border: none;
+    color: $dark;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: $font21mob;
+    text-align: left;
+    width: 60%;
+    line-height: clamp(12.5px, 5.840999999999999vw, 50px);
+    margin-top: $m32mob;
+  }
+
+  &__input::placeholder {
+    color: $dark;
+  }
+
+  &__separator {
+    border: 0.1px solid $dark;
+    width: clamp(137.5px, 64.25099999999999vw, 550px);
+  }
+}
+
+.form_pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .form-mob {
+    display: none;
+  }
+
+  .form_pc {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 86.6%;
+    margin: auto;
+  }
+
+  .form-pc {
+    margin-top: $m128;
     flex-direction: column;
-
+    align-items: flex-start;
+    &__first {
+      font-family: "Gotham Pro", sans-serif;
+      color: $red;
+      font-size: clamp(12px, 1.24992vw, 48px);
+      font-weight: 300;
+      margin-bottom: $m16;
+    }
     &__main {
-        font-family: "Roboto", sans-serif;
-        font-size: clamp(16px, 7.47648vw, 64px);
-        color: $dark;
-        font-weight: 700;
-        text-align: center;
-        width: 80%;
-        line-height: clamp(22.75px, 10.630619999999999vw, 91px);
-        margin-top: $m16mob;
+      font-family: "Gotham Pro", sans-serif;
+      color: $dark;
+      font-size: clamp(30px, 3.1248vw, 120px);
+      font-weight: bold;
+      margin-bottom: $m16;
     }
-
     &__main-span {
-        color: $red;
+      color: $red;
     }
-
     &__sec {
-        color: $dark;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        font-size: $font16mob;
-        text-align: center;
-        width: 70%;
-        line-height: clamp(12.5px, 5.840999999999999vw, 50px);
-        margin-top: $m16mob;
+      font-family: "Gotham Pro", sans-serif;
+      color: $dark;
+      font-size: clamp(13px, 1.35408vw, 52px);
+      font-weight: 300;
+      width: 40%;
+      line-height: clamp(20px, 2.0832vw, 80px);
     }
-
-    &__input {
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: $m32;
+      margin-bottom: $m64;
+      &__f {
+        display: flex;
+        flex-direction: row;
+        gap: $m64;
+      }
+      &__input {
         border: none;
+        padding-top: $m16;
+      }
+      &__input::placeholder {
+        font-family: "Gotham Pro", sans-serif;
         color: $dark;
-        font-family: "Roboto", sans-serif;
-        font-weight: 600;
-        font-size: $font21mob;
+        font-size: clamp(14px, 1.45824vw, 56px);
+        font-weight: 300;
         text-align: left;
-        width: 60%;
-        line-height: clamp(12.5px, 5.840999999999999vw, 50px);
-        margin-top: $m32mob;
-    }
-
-    &__input::placeholder {
+      }
+      &__separator {
+        border: 1px solid $dark;
+        margin-top: $m8;
+      }
+      &__input-s {
+        border: none;
+        margin-top: $m64;
+      }
+      &__input-s::placeholder {
+        font-family: "Gotham Pro", sans-serif;
         color: $dark;
+        font-size: clamp(14px, 1.45824vw, 56px);
+        font-weight: 300;
+        text-align: left;
+      }
+      &__separator-s {
+        border: 1px solid $dark;
+        margin-top: $m8;
+        width: 34.4%;
+      }
     }
-
-    &__separator {
-        border: 0.1px solid $dark;
-        width: clamp(137.5px, 64.25099999999999vw, 550px);
-    }
+  }
 }

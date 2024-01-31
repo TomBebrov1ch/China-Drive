@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/gothampro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/gothampro_medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/gothampro_light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/gothampro_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 // colors
 
 $red: #ed092d;

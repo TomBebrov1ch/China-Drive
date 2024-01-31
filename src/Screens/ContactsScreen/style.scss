@@ -1,34 +1,73 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: $m128mob;
+
+  &__img {
+    width: clamp(185px, 86.4468vw, 740px);
+    height: clamp(63.5px, 29.672279999999997vw, 254px);
+  }
+
+  &__con {
+    margin-top: $m64mob;
+    background-color: #f9f9f9;
+    width: clamp(194px, 90.65231999999999vw, 776px);
+    height: clamp(177px, 82.70855999999999vw, 708px);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: $m128mob;
+  }
+
+  &__carousel {
+    width: clamp(125px, 58.41vw, 500px);
+    height: clamp(63.5px, 29.672279999999997vw, 254px);
+    margin-top: $m32mob;
 
     &__img {
-        width: clamp(185px, 86.4468vw, 740px);
-        height: clamp(63.5px, 29.672279999999997vw, 254px);
     }
+  }
+}
 
-    &__con {
-        margin-top: $m64mob;
-        background-color: #F9F9F9;
-        width: clamp(194px, 90.65231999999999vw, 776px);
-        height: clamp(177px, 82.70855999999999vw, 708px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.contacts-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts-mob {
+    display: none;
+  }
+
+  .contacts-pc {
+    display: flex;
+  }
+
+  .contacts__pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    &__nav {
+      width: clamp(200px, 20.832vw, 800px);
+      height: clamp(183.5px, 19.11336vw, 734px);
+      background-color: #f9f9f9;
+      margin: $m8;
+      margin-top: $m64;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    &__carousel {
-        width: clamp(125px, 58.41vw, 500px);
-        height: clamp(63.5px, 29.672279999999997vw, 254px);
-        margin-top: $m32mob;
-
-        &__img {}
+    &__img {
+      width: clamp(114px, 11.87424vw, 456px);
+      height: clamp(114px, 11.87424vw, 456px);
     }
-
-
+    &__zeekr {
+      width: clamp(98px, 10.20768vw, 392px);
+      height: clamp(98px, 10.20768vw, 392px);
+    }
+  }
 }
