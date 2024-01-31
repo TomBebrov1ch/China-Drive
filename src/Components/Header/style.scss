@@ -23,3 +23,58 @@
     position: absolute;
   }
 }
+
+.header-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-mob {
+    display: none;
+  }
+
+  .header-pc {
+    display: flex;
+    margin-top: $m64;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86.6%;
+    margin: auto;
+
+    &__logo {
+      width: clamp(45.5px, 4.73928vw, 182px);
+      height: clamp(46.5px, 4.84344vw, 186px);
+    }
+
+    &__item {
+      text-align: center;
+
+      &__btn {
+        background-color: $red;
+        border: none;
+        padding: clamp(7.5px, 0.7812vw, 30px);
+        font-family: "Roboto", sans-serif;
+        font-size: $font20;
+        font-weight: 500;
+        color: $dark;
+        width: clamp(111px, 11.56176vw, 444px);
+      }
+    }
+
+    &__links {
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: $font21;
+      font-weight: 400;
+
+      &__item {
+        margin: $m32;
+      }
+    }
+  }
+
+}
