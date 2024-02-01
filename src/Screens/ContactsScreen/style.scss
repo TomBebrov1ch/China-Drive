@@ -20,6 +20,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &__swiper {
+      &__car {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__haval {
+        margin-top: clamp(45px, 21.0276vw, 180px);
+      }
+      &__chery {
+        margin-top: clamp(27.5px, 12.8502vw, 110px);
+      }
+    }
+  }
+
+  &__car {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(112.5px, 52.568999999999996vw, 450px);
+    height: clamp(112.5px, 52.568999999999996vw, 450px);
   }
 
   &__carousel {
@@ -45,18 +66,21 @@
     display: flex;
   }
 
+  .swiper {
+    width: clamp(825px, 85.932vw, 3300px);
+  }
+
   .contacts__pc {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin: auto;
+    padding-top: $m64;
     &__nav {
       width: clamp(200px, 20.832vw, 800px);
       height: clamp(183.5px, 19.11336vw, 734px);
       background-color: #f9f9f9;
-      margin: $m8;
-      margin-top: $m64;
       display: flex;
       justify-content: center;
       align-items: center;

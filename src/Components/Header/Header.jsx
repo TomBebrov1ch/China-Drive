@@ -6,8 +6,6 @@ import "../Header/style.scss";
 import logo from "../../assets/logo.svg";
 import Hamburger from "hamburger-react";
 
-import Button from "../Button/Button";
-
 const Header = (props) => {
   return (
     <>
@@ -25,12 +23,18 @@ const Header = (props) => {
       <section className="header-pc">
         <div class="container">
           <img src={logo} alt="image" class="container__logo" />
-          <nav className="container__links">
-            <ScrollLink class="container__links__item">Главная</ScrollLink>
-            <ScrollLink class="container__links__item">Бренды</ScrollLink>
-            <ScrollLink class="container__links__item">Контакты</ScrollLink>
-          </nav>
-          <ScrollLink class="container__item">
+          <div className="container__links">
+            <ScrollLink class="container__links__item" to="main-pc" smooth>
+              Главная
+            </ScrollLink>
+            <ScrollLink class="container__links__item" to="contacts-pc" smooth>
+              Бренды
+            </ScrollLink>
+            <ScrollLink class="container__links__item" to="form_pc" smooth>
+              Контакты
+            </ScrollLink>
+          </div>
+          <ScrollLink class="container__item" to="form_pc" smooth>
             <button className="container__item__btn">Заказать звонок</button>
           </ScrollLink>
         </div>

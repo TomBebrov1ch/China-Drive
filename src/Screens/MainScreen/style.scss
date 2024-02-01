@@ -55,6 +55,7 @@
       font-family: "Gotham Pro", sans-serif;
       font-size: clamp(12px, 1.24992vw, 48px);
       font-family: 300;
+      margin-bottom: $m32;
     }
 
     &__big {
@@ -63,7 +64,7 @@
       font-size: clamp(30px, 3.1248vw, 120px);
       font-weight: bold;
       width: 80%;
-      margin-top: $m16;
+      margin-bottom: $m32;
     }
 
     &__container {
@@ -83,6 +84,7 @@
 
       &__separator {
         border: 1px solid $dark;
+        margin-left: clamp(9px, 0.93744vw, 36px);
       }
 
       &__btn {
@@ -95,6 +97,12 @@
         color: $dark;
         width: clamp(111px, 11.56176vw, 444px);
         margin-left: $m32;
+        transition: 0.3s all;
+      }
+      &__btn:hover {
+        cursor: pointer;
+        background-color: $dark;
+        color: #ffffff;
       }
     }
   }
@@ -151,6 +159,12 @@
       color: $red;
       width: clamp(111px, 11.56176vw, 444px);
       margin-top: $m32;
+      transition: 0.5s all;
+    }
+    &__btn:hover {
+      cursor: pointer;
+      background-color: $red;
+      color: $dark;
     }
   }
 }

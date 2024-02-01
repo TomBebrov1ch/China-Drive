@@ -1,68 +1,77 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .footer {
-    background-color: $dark;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    &__logo {
-        margin-top: $m32mob;
-        margin-bottom: $m16mob;
-    }
+  &__logo {
+    margin-top: $m32mob;
+    margin-bottom: $m16mob;
+  }
 
-    &__text {
-        margin-top: $m16mob;
-        font-family: "Roboto", sans-serif;
-        color: #ffffff;
-        font-size: clamp(12px, 5.60736vw, 48px);
-        font-weight: 400;
-    }
+  &__text {
+    margin-top: $m16mob;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    font-size: clamp(12px, 5.60736vw, 48px);
+    font-weight: 400;
+  }
 }
 
 .footer_pc {
-    display: none;
+  display: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .footer-mob {
-        display: none;
+  .footer-mob {
+    display: none;
+  }
+
+  .footer_pc {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark;
+    width: 100%;
+    padding-top: $m32;
+    &__img {
+      width: clamp(910px, 94.7856vw, 3640px);
+      height: clamp(65.5px, 6.8224800000000005vw, 262px);
+      margin: auto;
+    }
+  }
+
+  .footer-pc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86.6%;
+    margin: auto;
+    background-color: $dark;
+
+    &__logo {
+      width: clamp(96.5px, 10.05144vw, 386px);
+      height: clamp(10.325px, 1.0754519999999999vw, 41.3px);
     }
 
-    .footer_pc {
-        display: flex;
-        background-color: $dark;
-        width: 100%;
-        padding-top: $m32;
+    &__items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__text {
+        margin: $m32;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: $font21;
+        font-weight: 400;
+        color: #ffffff;
+      }
     }
-
-    .footer-pc {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 86.6%;
-        margin: auto;
-        background-color: $dark;
-
-        &__logo {
-            width: clamp(96.5px, 10.05144vw, 386px);
-            height: clamp(10.325px, 1.0754519999999999vw, 41.3px);
-        }
-
-        &__items {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &__text {
-                margin: $m32;
-                text-align: center;
-                font-family: "Roboto", sans-serif;
-                font-size: $font21;
-                font-weight: 400;
-                color: #ffffff;
-            }
-        }
+    &__items:hover {
+      cursor: pointer;
     }
+  }
 }

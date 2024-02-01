@@ -68,6 +68,13 @@
     display: flex;
     width: 86.6%;
     margin: auto;
+    &__img {
+      width: clamp(759px, 79.05744vw, 3036px);
+      height: clamp(255px, 26.5608vw, 1020px);
+      position: relative;
+      left: $m128;
+      top: $m128;
+    }
   }
 
   .form-pc {
@@ -100,7 +107,7 @@
       color: $dark;
       font-size: clamp(13px, 1.35408vw, 52px);
       font-weight: 300;
-      width: 40%;
+      width: 85%;
       line-height: clamp(20px, 2.0832vw, 80px);
     }
 
@@ -141,7 +148,6 @@
         margin-top: $m64;
         width: clamp(125px, 13.02vw, 500px);
         height: $m32;
-
       }
 
       &__input-s::placeholder {

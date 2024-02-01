@@ -63,6 +63,10 @@
         color: $dark;
         width: clamp(111px, 11.56176vw, 444px);
       }
+      &__btn:hover {
+        cursor: pointer;
+        background-color: #ca0725;
+      }
     }
 
     &__links {
@@ -75,6 +79,8 @@
         margin: $m32;
       }
     }
+    &__links:hover {
+      cursor: pointer;
+    }
   }
-
 }

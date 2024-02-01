@@ -3,6 +3,7 @@ import React from "react";
 import "../Form/style.scss";
 import TextMain from "../TextMain/TextMain";
 import Button from "../Button/Button";
+import Car from "../../assets/4pc.webp";
 
 const Form = () => {
   return (
@@ -14,9 +15,9 @@ const Form = () => {
             classNameP={"main__par"}
             textFirst={"Контакты"}
           />
-          <nav className="form__main">
+          <h2 className="form__main">
             Свяжитесь с <span className="form__main-span">нами</span>
-          </nav>
+          </h2>
           <p className="form__sec">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna{" "}
@@ -41,9 +42,9 @@ const Form = () => {
       <section className="form_pc">
         <div className="form-pc">
           <p className="form-pc__first">Контакты</p>
-          <nav className="form-pc__main">
+          <h2 className="form-pc__main">
             Свяжитесь с <span className="form-pc__main-span">нами</span>
-          </nav>
+          </h2>
           <p className="form-pc__sec">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna{" "}
@@ -78,6 +79,7 @@ const Form = () => {
             <button className="container__item__btn">Заказать звонок</button>
           </div>
         </div>
+        <img src={Car} alt="car" className="form_pc__img" />
       </section>
     </>
   );

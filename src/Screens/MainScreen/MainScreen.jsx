@@ -6,9 +6,9 @@ import Menu from "../../Components/Menu/Menu";
 import TextMain from "../../Components/TextMain/TextMain";
 import { Link as ScrollLink } from "react-scroll";
 
-import Car from '../../assets/image-3.webp'
+import Car from "../../assets/image-3.webp";
 import Button from "../../Components/Button/Button";
-import CarPc from '../../assets/decoration.webp'
+import CarPc from "../../assets/decoration.webp";
 
 const MainScreen = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,28 +34,30 @@ const MainScreen = () => {
       <section className="main-mob">
         <div className="main-all">
           <TextMain
-            classNameC={'main'}
-            classNameP={'main__par'}
-            textFirst={'China Drive'}
-            classNameN={'main__nav'}
-            textBig={'Search, book, and order details easily'}
-            classNameS={'main__second'}
-            textSecond={'Lorem ipsum dolor sit amet consectetur. Sit porttitor vel magna vulputate.'} />
-          <ScrollLink smooth to="main__car">
-            <Button className={"main__btn"} text={'Подробнее'} />
+            classNameC={"main"}
+            classNameP={"main__par"}
+            textFirst={"China Drive"}
+            classNameN={"main__nav"}
+            textBig={"Search, book, and order details easily"}
+            classNameS={"main__second"}
+            textSecond={
+              "Lorem ipsum dolor sit amet consectetur. Sit porttitor vel magna vulputate."
+            }
+          />
+          <ScrollLink smooth to="contacts__con">
+            <Button className={"main__btn"} text={"Подробнее"} />
           </ScrollLink>
         </div>
         <div className="main-second">
           <img src={Car} alt="car" className="main__car" />
-          <div className='main__s'>
-            <nav className='main__s__nav'>
-              Тут должен быть большой заголовок
-            </nav>
-            <p className='main__s__second'>
-              Lorem ipsum dolor sit amet consectetur. Etiam at leo egestas et amet tincidunt. Justo fringilla blandit nibh rhoncus.
+          <div className="main__s">
+            <h2 className="main__s__nav">Тут должен быть большой заголовок</h2>
+            <p className="main__s__second">
+              Lorem ipsum dolor sit amet consectetur. Etiam at leo egestas et
+              amet tincidunt. Justo fringilla blandit nibh rhoncus.
             </p>
-            <ScrollLink smooth to={'form'}>
-              <Button className={"main__s__btn"} text={'Контакты'} />
+            <ScrollLink smooth to="contacts__con">
+              <Button className={"main__s__btn"} text={"Контакты"} />
             </ScrollLink>
           </div>
         </div>
@@ -63,28 +65,38 @@ const MainScreen = () => {
       <section className="main-pc">
         <div className="main_pc">
           <p className="main_pc__first">China Drive</p>
-          <nav className="main_pc__big">Search, book, and order details easily</nav>
-          <nav className="main_pc__container">
-            <p className="main_pc__container__second">Lorem ipsum dolor sit amet consectetur. Sit porttitor vel magna vulputate.</p>
+          <h2 className="main_pc__big">
+            Search, book, and order details easily
+          </h2>
+          <div className="main_pc__container">
+            <p className="main_pc__container__second">
+              Lorem ipsum dolor sit amet consectetur. Sit porttitor vel magna
+              vulputate.
+            </p>
             <hr className="main_pc__container__separator" />
-            <button className="main_pc__container__btn">Подробнее</button>
-          </nav>
+            <ScrollLink smooth to="contacts-pc">
+              <button className="main_pc__container__btn">Подробнее</button>
+            </ScrollLink>
+          </div>
         </div>
         <img src={CarPc} alt="car" className="main-pc__img" />
       </section>
       <div className="main_s">
-        <nav className="main_s__nav">
-          <nav className="main_s__big">
-            Тут должен быть большой заголовок
-          </nav>
+        <div className="main_s__nav">
+          <h2 className="main_s__big">Тут должен быть большой заголовок</h2>
           <nav>
             <hr className="main_s__separator" />
           </nav>
           <div className="main-s__items">
-            <p className="main_s__second">Lorem ipsum dolor sit amet consectetur. Etiam at leo egestas et amet tincidunt. Justo fringilla blandit nibh rhoncus. </p>
-            <button className="main_s__btn">Контакты</button>
+            <p className="main_s__second">
+              Lorem ipsum dolor sit amet consectetur. Etiam at leo egestas et
+              amet tincidunt. Justo fringilla blandit nibh rhoncus.{" "}
+            </p>
+            <ScrollLink smooth to="form_pc">
+              <button className="main_s__btn">Контакты</button>
+            </ScrollLink>
           </div>
-        </nav>
+        </div>
       </div>
     </>
   );
