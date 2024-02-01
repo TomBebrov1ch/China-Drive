@@ -7,7 +7,7 @@
   flex-direction: column;
 
   &__main {
-    font-family: "Roboto", sans-serif;
+    font-family: "Gotham Pro", sans-serif;
     font-size: clamp(16px, 7.47648vw, 64px);
     color: $dark;
     font-weight: 700;
@@ -23,11 +23,11 @@
 
   &__sec {
     color: $dark;
-    font-family: "Roboto", sans-serif;
+    font-family: "Gotham Pro", sans-serif;
     font-weight: 300;
     font-size: $font16mob;
     text-align: center;
-    width: 70%;
+    width: 80%;
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
     margin-top: $m16mob;
   }
@@ -35,13 +35,14 @@
   &__input {
     border: none;
     color: $dark;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+    font-family: "Gotham Pro", sans-serif;
+    font-weight: 300;
     font-size: $font21mob;
     text-align: left;
     width: 60%;
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
     margin-top: $m32mob;
+    margin-bottom: $m16;
   }
 
   &__input::placeholder {
@@ -73,6 +74,7 @@
     margin-top: $m128;
     flex-direction: column;
     align-items: flex-start;
+
     &__first {
       font-family: "Gotham Pro", sans-serif;
       color: $red;
@@ -80,6 +82,7 @@
       font-weight: 300;
       margin-bottom: $m16;
     }
+
     &__main {
       font-family: "Gotham Pro", sans-serif;
       color: $dark;
@@ -87,9 +90,11 @@
       font-weight: bold;
       margin-bottom: $m16;
     }
+
     &__main-span {
       color: $red;
     }
+
     &__sec {
       font-family: "Gotham Pro", sans-serif;
       color: $dark;
@@ -98,21 +103,26 @@
       width: 40%;
       line-height: clamp(20px, 2.0832vw, 80px);
     }
+
     &__inputs {
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-top: $m32;
       margin-bottom: $m64;
+
       &__f {
         display: flex;
         flex-direction: row;
         gap: $m64;
       }
+
       &__input {
         border: none;
-        padding-top: $m16;
+        width: clamp(125px, 13.02vw, 500px);
+        height: $m32;
       }
+
       &__input::placeholder {
         font-family: "Gotham Pro", sans-serif;
         color: $dark;
@@ -120,14 +130,20 @@
         font-weight: 300;
         text-align: left;
       }
+
       &__separator {
         border: 1px solid $dark;
         margin-top: $m8;
       }
+
       &__input-s {
         border: none;
         margin-top: $m64;
+        width: clamp(125px, 13.02vw, 500px);
+        height: $m32;
+
       }
+
       &__input-s::placeholder {
         font-family: "Gotham Pro", sans-serif;
         color: $dark;
@@ -135,10 +151,12 @@
         font-weight: 300;
         text-align: left;
       }
+
       &__separator-s {
         border: 1px solid $dark;
         margin-top: $m8;
-        width: 34.4%;
+        width: clamp(282.5px, 29.4252vw, 1130px);
+        margin-bottom: $m32;
       }
     }
   }

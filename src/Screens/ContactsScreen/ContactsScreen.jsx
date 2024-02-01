@@ -18,7 +18,6 @@ const ContactsScreen = () => {
           <div className="contacts__con">
             <img src={changan} alt="" className="contacts__car" />
           </div>
-          <Form />
         </div>
       </section>
       <section className="contacts-pc">

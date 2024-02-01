@@ -45,10 +45,8 @@ const MainScreen = () => {
             <Button className={"main__btn"} text={'Подробнее'} />
           </ScrollLink>
         </div>
-
         <div className="main-second">
           <img src={Car} alt="car" className="main__car" />
-
           <div className='main__s'>
             <nav className='main__s__nav'>
               Тут должен быть большой заголовок

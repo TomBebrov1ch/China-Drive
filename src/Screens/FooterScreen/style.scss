@@ -20,3 +20,49 @@
         font-weight: 400;
     }
 }
+
+.footer_pc {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer-mob {
+        display: none;
+    }
+
+    .footer_pc {
+        display: flex;
+        background-color: $dark;
+        width: 100%;
+        padding-top: $m32;
+    }
+
+    .footer-pc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 86.6%;
+        margin: auto;
+        background-color: $dark;
+
+        &__logo {
+            width: clamp(96.5px, 10.05144vw, 386px);
+            height: clamp(10.325px, 1.0754519999999999vw, 41.3px);
+        }
+
+        &__items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__text {
+                margin: $m32;
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                font-size: $font21;
+                font-weight: 400;
+                color: #ffffff;
+            }
+        }
+    }
+}
