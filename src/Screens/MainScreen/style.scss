@@ -78,13 +78,13 @@
         color: $dark;
         font-size: clamp(13px, 1.35408vw, 52px);
         font-weight: 300;
-        width: 65%;
         line-height: clamp(14.22px, 1.4811552000000001vw, 56.88px);
       }
 
       &__separator {
         border: 1px solid $dark;
-        margin-left: clamp(9px, 0.93744vw, 36px);
+        height: 100%;
+        margin-left: $m8;
       }
 
       &__btn {
@@ -99,6 +99,7 @@
         margin-left: $m32;
         transition: 0.3s all;
       }
+
       &__btn:hover {
         cursor: pointer;
         background-color: $dark;
@@ -115,6 +116,7 @@
     height: clamp(154.5px, 16.09272vw, 618px);
 
     &__nav {
+
       width: 86.6%;
       margin: auto;
       display: flex;
@@ -132,21 +134,20 @@
 
     &__separator {
       border: 1px solid $red;
-      height: 80%;
-      margin: $m32;
+      margin-top: $m32;
     }
 
-    &__items {
-    }
+    &__items {}
 
     &__second {
       font-family: "Gotham Pro", sans-serif;
       color: #ffffff;
       font-size: clamp(13px, 1.35408vw, 52px);
-      width: 39%;
+      width: 40%;
       font-weight: 300;
       line-height: clamp(14.22px, 1.4811552000000001vw, 56.88px);
-      margin-top: $m32;
+      margin-top: clamp(21px, 2.18736vw, 84px);
+      margin-left: $m32;
     }
 
     &__btn {
@@ -160,7 +161,9 @@
       width: clamp(111px, 11.56176vw, 444px);
       margin-top: $m32;
       transition: 0.5s all;
+      margin-left: $m32;
     }
+
     &__btn:hover {
       cursor: pointer;
       background-color: $red;

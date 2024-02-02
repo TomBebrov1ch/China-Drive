@@ -1,6 +1,7 @@
 import "../ContactsScreen/style.scss";
 import redCar from "../../assets/Group-437.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Fade, Slide } from "react-awesome-reveal";
 
 import "swiper/css";
 
@@ -23,7 +24,9 @@ const ContactsScreen = () => {
     <>
       <section className="contacts-mob">
         <div className="contacts">
-          <img src={redCar} alt="" className="contacts__img" />
+          <Fade direction="right" triggerOnce>
+            <img src={redCar} alt="" className="contacts__img" />
+          </Fade>
           <div className="contacts__con">
             <Swiper
               className="contacts__con__swiper"

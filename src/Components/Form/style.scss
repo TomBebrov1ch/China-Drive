@@ -12,9 +12,10 @@
     color: $dark;
     font-weight: 700;
     text-align: center;
-    width: 80%;
+    width: 100%;
     line-height: clamp(22.75px, 10.630619999999999vw, 91px);
-    margin-top: $m16mob;
+    padding-top: $m16mob;
+    margin: auto;
   }
 
   &__main-span {
@@ -29,7 +30,8 @@
     text-align: center;
     width: 80%;
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
-    margin-top: $m16mob;
+    padding-top: $m16mob;
+    margin: auto
   }
 
   &__input {
@@ -39,7 +41,7 @@
     font-weight: 300;
     font-size: $font21mob;
     text-align: left;
-    width: 60%;
+    width: 100%;
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
     margin-top: $m32mob;
     margin-bottom: $m16;
@@ -68,6 +70,7 @@
     display: flex;
     width: 86.6%;
     margin: auto;
+
     &__img {
       width: clamp(759px, 79.05744vw, 3036px);
       height: clamp(255px, 26.5608vw, 1020px);

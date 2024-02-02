@@ -66,7 +66,8 @@
             text-align: center;
             width: 80%;
             line-height: clamp(22.75px, 10.630619999999999vw, 91px);
-            margin-top: $m16mob;
+            padding-top: $m16mob;
+            margin: auto;
         }
 
         &__second {
@@ -77,7 +78,8 @@
             line-height: clamp(12.5px, 5.840999999999999vw, 50px);
             font-size: $font16mob;
             font-weight: 200;
-            margin-top: $m16mob;
+            padding-top: $m16mob;
+            margin: auto;
         }
 
         &__btn {}
