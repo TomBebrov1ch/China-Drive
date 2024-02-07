@@ -36,6 +36,7 @@
     background-color: $dark;
     width: 100%;
     padding-top: $m32;
+    margin-top: $m64;
     &__img {
       width: clamp(910px, 94.7856vw, 3640px);
       height: clamp(65.5px, 6.8224800000000005vw, 262px);

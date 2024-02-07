@@ -1,113 +1,195 @@
-import React from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { Fade } from "react-awesome-reveal";
+import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 import "../Form/style.scss";
-import TextMain from "../TextMain/TextMain";
+
 import Button from "../Button/Button";
 import Car from "../../assets/4pc.webp";
 
 const Form = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [vin, setVin] = useState("");
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState("");
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
+  const onSubmit = (data, e) => {
+    e.preventDefault();
 
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result);
+          reset();
+        },
+        (error) => {
+          console.error(error.text);
+        }
+      );
+    setName("");
+    setPhone("");
+    setVin("");
+  };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(
+          "https://fakestoreapi.com/products?limit=20"
+        );
+        setProducts(response.data);
+        console.log(response.data);
+      } catch (error) {
+        setError("Could not fetch products");
+        console.error("There was an error!", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   return (
     <>
-      <section className="form-mob">
-        <div className="form">
-          <Fade direction="left" triggerOnce>
-            <TextMain
-              classNameC={"main"}
-              classNameP={"main__par"}
-              textFirst={"Контакты"}
-            />
-          </Fade>
-
-          <Fade direction="right" triggerOnce>
-            <h2 className="form__main">
-              Свяжитесь с <span className="form__main-span">нами</span>
-            </h2>
-          </Fade>
-          <Fade direction="left" triggerOnce>
-            <p className="form__sec">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna{" "}
-            </p>
-          </Fade>
-          <Fade direction="right" triggerOnce>
-            <input type="text" placeholder="Ваше имя" className="form__input" />
-            <hr className="form__separator" />
-            <input
-              type="text"
-              placeholder="Ваш телефон"
-              className="form__input"
-            />
-            <hr className="form__separator" />
-            <input
-              type="text"
-              placeholder="VIN автомобиля"
-              className="form__input"
-            />
-            <hr className="form__separator" />
-          </Fade>
-          <Fade direction="left" triggerOnce>
-            <Button className={"сontacts-btn"} text={"Заказать звонок"} />
-          </Fade>
-        </div>
-      </section>
-      <section className="form_pc">
-        <div className="form-pc">
-          <Fade direction="right" triggerOnce>
-            <p className="form-pc__first">Контакты</p>
-          </Fade>
-          <Fade direction="right" delay={100} triggerOnce>
-            <h2 className="form-pc__main">
-              Свяжитесь с <span className="form-pc__main-span">нами</span>
-            </h2>
-          </Fade>
-          <Fade direction="right" delay={200} triggerOnce>
-            <p className="form-pc__sec">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna{" "}
-            </p>
-          </Fade>
-          <div className="form-pc__inputs">
-            <div className="form-pc__inputs__f">
-              <Fade direction="right">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Ваше имя"
-                    className="form-pc__inputs__input"
-                  />
-                  <hr className="form-pc__inputs__separator" />
-                </div>
-              </Fade>
-              <Fade direction="right" delay={100} triggerOnce>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Ваш телефон"
-                    className="form-pc__inputs__input"
-                  />
-                  <hr className="form-pc__inputs__separator" />
-                </div>
-              </Fade>
-            </div>
-            <Fade direction="right" delay={200} triggerOnce>
-              <div>
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <section className="form-mob" id="form-mob">
+          <div className="form">
+            <Fade direction="left" triggerOnce></Fade>
+            <Fade direction="right" triggerOnce>
+              <h2 className="form__main">
+                Свяжитесь с <span className="form__main-span">нами</span>
+              </h2>
+            </Fade>
+            <Fade direction="left" triggerOnce>
+              <p className="form__sec">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna{" "}
+              </p>
+            </Fade>
+            <form>
+              <Fade direction="right" triggerOnce>
+                <input
+                  type="text"
+                  placeholder="Ваше имя"
+                  className="form__input"
+                  style={{ outline: "none" }}
+                  required={true}
+                  onChange={(event) => setName(event.target.value)}
+                  value={name}
+                  name="name"
+                />
+                <input
+                  type="text"
+                  placeholder="Ваш телефон"
+                  className="form__input"
+                  style={{ outline: "none" }}
+                  required={true}
+                  onChange={(event) => setPhone(event.target.value)}
+                  value={phone}
+                  name="phone"
+                />
                 <input
                   type="text"
                   placeholder="VIN автомобиля"
-                  className="form-pc__inputs__input-s"
+                  className="form__input"
+                  style={{ outline: "none" }}
+                  required={true}
+                  onChange={(event) => setVin(event.target.value)}
+                  value={vin}
+                  name="vin"
                 />
-                <hr className="form-pc__inputs__separator-s" />
-              </div>
+              </Fade>
+            </form>
+            <Fade direction="left" triggerOnce>
+              <Button className={"сontacts-btn"} text={"Заказать звонок"} />
             </Fade>
-            <button className="container__item__btn">Заказать звонок</button>
           </div>
-        </div>
-        <img src={Car} alt="car" className="form_pc__img" />
-      </section>
+        </section>
+        <section className="form_pc">
+          <div className="form-pc">
+            <Fade direction="right" triggerOnce>
+              <p className="form-pc__first">Контакты</p>
+            </Fade>
+            <Fade direction="right" delay={100} triggerOnce>
+              <h2 className="form-pc__main">
+                Свяжитесь с <span className="form-pc__main-span">нами</span>
+              </h2>
+            </Fade>
+            <Fade direction="right" delay={200} triggerOnce>
+              <p className="form-pc__sec">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna{" "}
+              </p>
+            </Fade>
+            <form className="form-pc__inputs">
+              <div className="form-pc__inputs__f">
+                <Fade direction="right" triggerOnce>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Ваше имя"
+                      className="form-pc__inputs__input"
+                      style={{ outline: "none" }}
+                      required={true}
+                      onChange={(event) => setName(event.target.value)}
+                      value={name}
+                      name="name"
+                    />
+                  </div>
+                </Fade>
+                <Fade direction="right" delay={100} triggerOnce>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Ваш телефон"
+                      className="form-pc__inputs__input"
+                      style={{ outline: "none" }}
+                      required={true}
+                      onChange={(event) => setPhone(event.target.value)}
+                      value={phone}
+                      name="phone"
+                    />
+                  </div>
+                </Fade>
+              </div>
+              <Fade direction="right" delay={200} triggerOnce>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="VIN автомобиля"
+                    className="form-pc__inputs__input-s"
+                    style={{ outline: "none" }}
+                    required={true}
+                    onChange={(event) => setVin(event.target.value)}
+                    value={vin}
+                    name="vin"
+                  />
+                </div>
+              </Fade>
+              <button type="submit" className="container__item__btn">
+                Заказать звонок
+              </button>
+            </form>
+          </div>
+          <Fade direction="right" triggerOnce>
+            <img src={Car} alt="car" className="form_pc__img" />
+          </Fade>
+        </section>
+      </form>
     </>
   );
 };

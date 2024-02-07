@@ -24,36 +24,39 @@
 
   &__sec {
     color: $dark;
-    font-family: "Gotham Pro", sans-serif;
-    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     font-size: $font16mob;
     text-align: center;
     width: 80%;
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
     padding-top: $m16mob;
-    margin: auto
+    margin: auto;
   }
 
   &__input {
-    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $dark;
     color: $dark;
     font-family: "Gotham Pro", sans-serif;
     font-weight: 300;
     font-size: $font21mob;
     text-align: left;
-    width: 100%;
+    width: clamp(135px, 63.0828vw, 540px);
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
     margin-top: $m32mob;
     margin-bottom: $m16;
+    padding-bottom: clamp(5px, 2.3364vw, 20px);
+    text-indent: 10px;
   }
 
   &__input::placeholder {
     color: $dark;
   }
-
-  &__separator {
-    border: 0.1px solid $dark;
-    width: clamp(137.5px, 64.25099999999999vw, 550px);
+  &__input:focus {
+    border-bottom: 2px solid $red;
   }
 }
 
@@ -72,11 +75,10 @@
     margin: auto;
 
     &__img {
-      width: clamp(759px, 79.05744vw, 3036px);
       height: clamp(255px, 26.5608vw, 1020px);
       position: relative;
       left: $m128;
-      top: $m128;
+      top: clamp(87.5px, 9.114vw, 350px);
     }
   }
 
@@ -96,7 +98,7 @@
     &__main {
       font-family: "Gotham Pro", sans-serif;
       color: $dark;
-      font-size: clamp(30px, 3.1248vw, 120px);
+      font-size: clamp(20px, 2.0832vw, 80px);
       font-weight: bold;
       margin-bottom: $m16;
     }
@@ -106,12 +108,12 @@
     }
 
     &__sec {
-      font-family: "Gotham Pro", sans-serif;
+      font-family: "Roboto", sans-serif;
       color: $dark;
-      font-size: clamp(13px, 1.35408vw, 52px);
+      font-size: clamp(9px, 0.93744vw, 36px);
       font-weight: 300;
-      width: 85%;
-      line-height: clamp(20px, 2.0832vw, 80px);
+      width: 55%;
+      line-height: $m32;
     }
 
     &__inputs {
@@ -128,9 +130,17 @@
       }
 
       &__input {
-        border: none;
-        width: clamp(125px, 13.02vw, 500px);
-        height: $m32;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $dark;
+        width: clamp(124px, 12.915840000000001vw, 496px);
+        padding-bottom: clamp(5px, 0.5208vw, 20px);
+        font-family: "Gotham Pro", sans-serif;
+        color: $dark;
+        font-size: clamp(13.5px, 1.40616vw, 54px);
+        font-weight: 300;
+        text-indent: clamp(3px, 0.31248vw, 12px);
       }
 
       &__input::placeholder {
@@ -140,17 +150,28 @@
         font-weight: 300;
         text-align: left;
       }
-
-      &__separator {
-        border: 1px solid $dark;
-        margin-top: $m8;
+      &__input:focus {
+        border-bottom: 2px solid $red;
       }
 
       &__input-s {
-        border: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $dark;
         margin-top: $m64;
-        width: clamp(125px, 13.02vw, 500px);
-        height: $m32;
+        margin-bottom: $m32;
+        padding-bottom: clamp(5px, 0.5208vw, 20px);
+        width: 82.5%;
+        font-family: "Gotham Pro", sans-serif;
+        color: $dark;
+        font-size: clamp(13.5px, 1.40616vw, 54px);
+        font-weight: 300;
+        text-align: left;
+        text-indent: clamp(3px, 0.31248vw, 12px);
+      }
+      &__input-s:focus {
+        border-bottom: 2px solid $red;
       }
 
       &__input-s::placeholder {
@@ -159,13 +180,6 @@
         font-size: clamp(14px, 1.45824vw, 56px);
         font-weight: 300;
         text-align: left;
-      }
-
-      &__separator-s {
-        border: 1px solid $dark;
-        margin-top: $m8;
-        width: clamp(282.5px, 29.4252vw, 1130px);
-        margin-bottom: $m32;
       }
     }
   }

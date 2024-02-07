@@ -1,11 +1,76 @@
 @import "../../styles/variables.scss";
 
+.main-mob {
+}
 .main-all {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 3;
+  margin-top: $m128;
+  &__par {
+    color: $red;
+    font-family: "Gotham Pro", sans-serif;
+    font-weight: 400;
+    font-size: $font17mob;
+  }
+  &__big {
+    font-family: "Gotham Pro", sans-serif;
+    font-size: clamp(16px, 7.47648vw, 64px);
+    color: $dark;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    line-height: clamp(22.75px, 10.630619999999999vw, 91px);
+    margin-top: $m16mob;
+  }
+  &__sec {
+    color: $dark;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: $font16mob;
+    text-align: center;
+    width: 55%;
+    line-height: clamp(12.5px, 5.840999999999999vw, 50px);
+    margin-top: $m16mob;
+  }
+  &__s {
+    &__con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: $dark;
+      height: auto;
+      padding-top: $m64mob;
+    }
+    &__nav {
+      font-family: "Gotham Pro", sans-serif;
+      font-size: clamp(16px, 7.47648vw, 64px);
+      color: #ffffff;
+      font-weight: 700;
+      text-align: center;
+      width: 80%;
+      line-height: clamp(22.75px, 10.630619999999999vw, 91px);
+      margin-top: $m16mob;
+    }
+    &__second {
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: $font16mob;
+      text-align: center;
+      width: 65%;
+      line-height: clamp(12.5px, 5.840999999999999vw, 50px);
+      margin-top: $m16mob;
+    }
+    &__car {
+      position: relative;
+      top: $m64mob;
+      width: clamp(214px, 99.99792vw, 856px);
+      height: clamp(118px, 55.139039999999994vw, 472px);
+    }
+  }
 }
 
 .main-second {
@@ -36,11 +101,10 @@
     position: relative;
 
     &__img {
-      width: clamp(612px, 63.74592vw, 2448px);
       height: clamp(318.5px, 33.17496vw, 1274px);
       position: relative;
       left: clamp(65px, 6.7704vw, 260px);
-      top: clamp(60px, 6.2496vw, 240px);
+      top: $m128;
     }
   }
 
@@ -48,43 +112,44 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: $m128;
 
     &__first {
       color: $red;
       font-family: "Gotham Pro", sans-serif;
       font-size: clamp(12px, 1.24992vw, 48px);
       font-family: 300;
-      margin-bottom: $m32;
+      margin-bottom: $m16;
     }
 
     &__big {
       font-family: "Gotham Pro", sans-serif;
       color: $dark;
-      font-size: clamp(30px, 3.1248vw, 120px);
+      font-size: clamp(20px, 2.0832vw, 80px);
       font-weight: bold;
-      width: 80%;
-      margin-bottom: $m32;
+      width: 55%;
+      margin-bottom: $m16;
     }
 
     &__container {
       display: flex;
       justify-content: left;
       flex-direction: row;
-      margin-top: $m16;
+      align-items: center;
 
       &__second {
-        font-family: "Gotham Pro", sans-serif;
+        font-family: "Roboto", sans-serif;
         color: $dark;
-        font-size: clamp(13px, 1.35408vw, 52px);
-        font-weight: 300;
-        line-height: clamp(14.22px, 1.4811552000000001vw, 56.88px);
+        font-size: clamp(9px, 0.93744vw, 36px);
+        font-weight: 400;
+        line-height: clamp(15px, 1.5624vw, 60px);
+        width: 60%;
       }
 
       &__separator {
         border: 1px solid $dark;
-        height: 100%;
-        margin-left: $m8;
+        height: clamp(35px, 3.6456vw, 140px);
+        position: relative;
+        right: clamp(100px, 10.416vw, 400px);
       }
 
       &__btn {
@@ -98,6 +163,8 @@
         width: clamp(111px, 11.56176vw, 444px);
         margin-left: $m32;
         transition: 0.3s all;
+        position: relative;
+        right: clamp(95px, 9.8952vw, 380px);
       }
 
       &__btn:hover {
@@ -112,11 +179,10 @@
     display: flex;
     background-color: $dark;
     width: 100%;
-    padding-bottom: $m16;
-    height: clamp(154.5px, 16.09272vw, 618px);
+    padding-top: $m32;
+    height: clamp(140px, 14.5824vw, 560px);
 
     &__nav {
-
       width: 86.6%;
       margin: auto;
       display: flex;
@@ -125,28 +191,30 @@
     &__big {
       font-family: "Gotham Pro", sans-serif;
       color: #ffffff;
-      font-size: clamp(30px, 3.1248vw, 120px);
+      font-size: clamp(20px, 2.0832vw, 80px);
       font-weight: bold;
-      width: 40%;
+      width: 22%;
       margin-top: $m16;
-      line-height: clamp(42.5px, 4.4268vw, 170px);
+      line-height: clamp(27.5px, 2.8644000000000003vw, 110px);
+      margin-right: $m16;
     }
 
     &__separator {
       border: 1px solid $red;
-      margin-top: $m32;
+      margin-top: clamp(6px, 0.62496vw, 24px);
+      margin-right: $m16;
     }
 
-    &__items {}
+    &__items {
+    }
 
     &__second {
-      font-family: "Gotham Pro", sans-serif;
+      font-family: "Roboto", sans-serif;
       color: #ffffff;
-      font-size: clamp(13px, 1.35408vw, 52px);
-      width: 40%;
-      font-weight: 300;
-      line-height: clamp(14.22px, 1.4811552000000001vw, 56.88px);
-      margin-top: clamp(21px, 2.18736vw, 84px);
+      font-size: clamp(9px, 0.93744vw, 36px);
+      width: 30%;
+      font-weight: 200;
+      line-height: clamp(15px, 1.5624vw, 60px);
       margin-left: $m32;
     }
 
@@ -169,5 +237,13 @@
       background-color: $red;
       color: $dark;
     }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .main-pc__img {
+    height: clamp(275px, 28.644000000000002vw, 1100px);
+    width: clamp(350px, 36.456vw, 1400px);
+    top: $m32;
   }
 }

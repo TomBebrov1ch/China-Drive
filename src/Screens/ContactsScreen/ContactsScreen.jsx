@@ -1,7 +1,7 @@
 import "../ContactsScreen/style.scss";
 import redCar from "../../assets/Group-437.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 import "swiper/css";
 

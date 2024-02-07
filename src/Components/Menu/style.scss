@@ -1,23 +1,37 @@
 @import "../../styles/variables.scss";
 
 .menu {
-  background-color: #ffff;
+  background-color: #ffffff;
+  height: clamp(425px, 198.594vw, 1700px);
   width: 100%;
-  height: 100dvh;
-  z-index: 100;
-  position: absolute;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
+  z-index: 1000;
 
-  &__item {
-    margin-top: $m32mob;
+  &__content {
+    margin-bottom: 30px;
     font-family: "Roboto", sans-serif;
     font-size: $font28mob;
     color: $dark;
+    bottom: $m64mob;
+    text-align: center;
     position: relative;
-    bottom: clamp(50px, 23.363999999999997vw, 200px);
+    &__btn {
+      background-color: $red;
+      border: none;
+      padding: clamp(7.5px, 3.5046vw, 30px);
+      font-family: "Roboto", sans-serif;
+      font-size: $font22mob;
+      font-weight: 500;
+      color: $dark;
+      width: clamp(125px, 58.41vw, 500px);
+      margin-bottom: $m64mob;
+      text-align: center;
+      position: relative;
+      bottom: $m32mob;
+    }
   }
 }

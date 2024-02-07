@@ -46,8 +46,8 @@
     margin: auto;
 
     &__logo {
-      width: clamp(45.5px, 4.73928vw, 182px);
-      height: clamp(46.5px, 4.84344vw, 186px);
+      width: clamp(60px, 6.2496vw, 240px);
+      height: clamp(60px, 6.2496vw, 240px);
     }
 
     &__item {
@@ -62,6 +62,7 @@
         font-weight: 500;
         color: $dark;
         width: clamp(111px, 11.56176vw, 444px);
+        transition: 0.3s all;
       }
       &__btn:hover {
         cursor: pointer;
@@ -76,11 +77,13 @@
       font-weight: 400;
 
       &__item {
+        transition: 0.3s all;
         margin: $m32;
       }
-    }
-    &__links:hover {
-      cursor: pointer;
+      &__item:hover {
+        cursor: pointer;
+        color: $red;
+      }
     }
   }
 }

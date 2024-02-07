@@ -10,10 +10,8 @@
   color: $dark;
   width: clamp(125px, 58.41vw, 500px);
   position: relative;
-  bottom: clamp(17.5px, 8.177399999999999vw, 70px);
+  bottom: $m64mob;
 }
-
-
 
 .main__btn {
   background-color: #ffff;
@@ -25,6 +23,7 @@
   color: $dark;
   width: clamp(100px, 46.727999999999994vw, 400px);
   margin-top: $m32mob;
+  text-align: center;
 }
 
 .main__s__btn {
@@ -38,6 +37,7 @@
   width: clamp(100px, 46.727999999999994vw, 400px);
   margin-top: $m32mob;
   margin-bottom: $m64mob;
+  text-align: center;
 }
 
 .сontacts-btn {
@@ -51,4 +51,5 @@
   width: clamp(125px, 58.41vw, 500px);
   margin-top: $m32mob;
   margin-bottom: $m64mob;
+  text-align: center;
 }

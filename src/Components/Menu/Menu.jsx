@@ -1,50 +1,39 @@
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import { Link as ScrollLink } from "react-scroll";
-import Button from "../Button/Button";
 
 import "../Menu/style.scss";
 
 const Menu = (props) => {
   return (
-    <Slide direction="right" triggerOnce>
-      <div className="menu">
-        <ScrollLink
-          smooth
-          to={"main"}
-          onClick={props.closeMenu}
-          className="menu__item"
-        >
-          <Fade direction="right" delay={100}>
+    <Slide className="menu" direction="right" triggerOnce>
+      <nav className="menu">
+        <Fade className="menu__content" direction="right">
+          <ScrollLink onClick={props.closeMenu} smooth to="main-all">
             Главная
-          </Fade>
-        </ScrollLink>
-        <ScrollLink
-          smooth
-          to={"contacts"}
-          onClick={props.closeMenu}
-          className="menu__item"
-        >
-          <Fade direction="right" delay={200}>
+          </ScrollLink>
+        </Fade>
+        <Fade className="menu__content" direction="right" delay={100}>
+          <ScrollLink onClick={props.closeMenu} smooth to="contacts-mob">
             Бренды
-          </Fade>
-        </ScrollLink>
-        <ScrollLink
-          smooth
-          to={"form"}
-          onClick={props.closeMenu}
-          className="menu__item"
-        >
-          <Fade direction="right" delay={300}>
+          </ScrollLink>
+        </Fade>
+        <Fade className="menu__content" direction="right" delay={200}>
+          <ScrollLink onClick={props.closeMenu} smooth to="form-mob">
             Контакты
-          </Fade>
-        </ScrollLink>
-        <ScrollLink smooth to={"form"} onClick={props.closeMenu}>
-          <Fade direction="right" delay={400}>
-            <Button className={"menu-btn"} text="Заказать звонок" />
-          </Fade>
-        </ScrollLink>
-      </div>
+          </ScrollLink>
+        </Fade>
+        <Fade className="menu__content__btn" direction="right" delay={300}>
+          <ScrollLink
+            onClick={props.closeMenu}
+            className="menu__item"
+            smooth
+            to="form-mob"
+          >
+            Заказать звонок
+          </ScrollLink>
+        </Fade>
+      </nav>
     </Slide>
   );
 };
