@@ -55,6 +55,7 @@
   &__input::placeholder {
     color: $dark;
   }
+
   &__input:focus {
     border-bottom: 2px solid $red;
   }
@@ -78,7 +79,7 @@
       height: clamp(255px, 26.5608vw, 1020px);
       position: relative;
       left: $m128;
-      top: clamp(87.5px, 9.114vw, 350px);
+      top: clamp(42.5px, 4.4268vw, 170px);
     }
   }
 
@@ -150,6 +151,7 @@
         font-weight: 300;
         text-align: left;
       }
+
       &__input:focus {
         border-bottom: 2px solid $red;
       }
@@ -170,6 +172,7 @@
         text-align: left;
         text-indent: clamp(3px, 0.31248vw, 12px);
       }
+
       &__input-s:focus {
         border-bottom: 2px solid $red;
       }

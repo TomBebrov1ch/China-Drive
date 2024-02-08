@@ -6,6 +6,7 @@ import logo from "../../assets/china.svg";
 import logoPc from "../../assets/china.svg";
 import Button from "../../Components/Button/Button";
 import China from "../../assets/image-5.webp";
+import logoS from '../../assets/spark_logo.svg'
 
 const FooterScreen = () => {
   return (
@@ -27,6 +28,9 @@ const FooterScreen = () => {
           <ScrollLink smooth to={"form"}>
             <Button className={"сontacts-btn"} text={"Заказать звонок"} />
           </ScrollLink>
+          <a href="https://sparkstudio.kz/home">
+            <img src={logoS} alt="logo" className="footer__logo-s" />
+          </a>
         </div>
       </section>
       <section className="footer_pc">
@@ -57,6 +61,9 @@ const FooterScreen = () => {
             <button className="container__item__btn">Заказать звонок</button>
           </ScrollLink>
         </div>
+        <a href="https://sparkstudio.kz/home">
+          <img src={logoS} alt="logo" className="footer_pc__logo-s" />
+        </a>
         <img src={China} alt="" className="footer_pc__img" />
       </section>
     </>

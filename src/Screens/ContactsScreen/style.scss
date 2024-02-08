@@ -20,15 +20,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &__swiper {
       &__car {
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
       &__haval {
         margin-top: clamp(45px, 21.0276vw, 180px);
       }
+
       &__chery {
         margin-top: clamp(27.5px, 12.8502vw, 110px);
       }
@@ -48,8 +51,7 @@
     height: clamp(63.5px, 29.672279999999997vw, 254px);
     margin-top: $m32mob;
 
-    &__img {
-    }
+    &__img {}
   }
 }
 
@@ -77,6 +79,8 @@
     flex-direction: row;
     margin: auto;
     padding-top: $m64;
+    padding-bottom: $m64;
+
     &__nav {
       width: clamp(200px, 20.832vw, 800px);
       height: clamp(183.5px, 19.11336vw, 734px);
@@ -85,10 +89,12 @@
       justify-content: center;
       align-items: center;
     }
+
     &__img {
       width: clamp(114px, 11.87424vw, 456px);
       height: clamp(114px, 11.87424vw, 456px);
     }
+
     &__zeekr {
       width: clamp(98px, 10.20768vw, 392px);
       height: clamp(98px, 10.20768vw, 392px);

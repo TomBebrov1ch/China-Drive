@@ -19,6 +19,12 @@
     font-size: clamp(12px, 5.60736vw, 48px);
     font-weight: 400;
   }
+
+  &__logo-s {
+    width: clamp(105px, 49.0644vw, 420px);
+    height: clamp(34.5px, 16.12116vw, 138px);
+    margin-bottom: $m32mob;
+  }
 }
 
 .footer_pc {
@@ -33,14 +39,22 @@
   .footer_pc {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: $dark;
     width: 100%;
     padding-top: $m32;
     margin-top: $m64;
+
     &__img {
       width: clamp(910px, 94.7856vw, 3640px);
       height: clamp(65.5px, 6.8224800000000005vw, 262px);
       margin: auto;
+    }
+
+    &__logo-s {
+      margin-top: $m16;
+      width: clamp(100px, 10.416vw, 400px);
+      height: clamp(50px, 5.208vw, 200px);
     }
   }
 
@@ -57,22 +71,31 @@
       height: clamp(10.325px, 1.0754519999999999vw, 41.3px);
     }
 
+    &__logo:hover {
+      cursor: pointer;
+    }
+
     &__items {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 25%;
+      justify-content: space-around;
 
       &__text {
-        margin: $m32;
+        // margin: $m32;
         text-align: center;
         font-family: "Roboto", sans-serif;
         font-size: $font21;
         font-weight: 400;
         color: #ffffff;
+        transition: 0.3s all;
       }
-    }
-    &__items:hover {
-      cursor: pointer;
+
+      &__text:hover {
+        color: $red;
+        cursor: pointer;
+      }
     }
   }
 }
