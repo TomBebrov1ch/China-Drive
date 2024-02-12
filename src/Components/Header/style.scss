@@ -67,9 +67,14 @@
         width: clamp(111px, 11.56176vw, 444px);
         transition: 0.3s all;
       }
+
       &__btn:hover {
         cursor: pointer;
+<<<<<<< HEAD
         background-color: #90051a;
+=======
+        background-color: #90051A;
+>>>>>>> 2266f8f96ce05054e55d5aa6116a5ededeb4ce91
       }
     }
 
@@ -83,6 +88,7 @@
         transition: 0.3s all;
         margin: $m32;
       }
+
       &__item:hover {
         cursor: pointer;
         color: $red;
