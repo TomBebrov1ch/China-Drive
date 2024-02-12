@@ -49,6 +49,9 @@
       width: clamp(60px, 6.2496vw, 240px);
       height: clamp(60px, 6.2496vw, 240px);
     }
+    &__logo:hover {
+      cursor: pointer;
+    }
 
     &__item {
       text-align: center;
@@ -66,7 +69,7 @@
       }
       &__btn:hover {
         cursor: pointer;
-        background-color: #ca0725;
+        background-color: #90051a;
       }
     }
 

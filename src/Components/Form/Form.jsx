@@ -76,8 +76,8 @@ const Form = () => {
             </Fade>
             <Fade direction="left" triggerOnce>
               <p className="form__sec">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna{" "}
+                Нужна помощь с заказом деталей? Мы готовы помочь! Обращайтесь к
+                нам для консультации и оформления заказа.{" "}
               </p>
             </Fade>
             <form>
@@ -131,8 +131,8 @@ const Form = () => {
             </Fade>
             <Fade direction="right" delay={200} triggerOnce>
               <p className="form-pc__sec">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna{" "}
+                Нужна помощь с заказом деталей? Мы готовы помочь! Обращайтесь к
+                нам для консультации и оформления заказа.{" "}
               </p>
             </Fade>
             <form className="form-pc__inputs">

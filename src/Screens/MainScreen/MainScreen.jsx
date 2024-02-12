@@ -37,11 +37,11 @@ const MainScreen = () => {
             <p className="main-all__par">China Drive</p>
           </Fade>
           <Fade direction="up" triggerOnce className="main-all__big">
-            Search, book, and order details easily
+            Поиск и заказ деталей это быстро и легко.
           </Fade>
           <Fade direction="up" triggerOnce className="main-all__sec">
-            Lorem ipsum dolor sit amet consectetur. Sit porttitor vel magna
-            vulputate.
+            Поиск, бронирование и заказ комплектующих теперь стали максимально
+            удобными и эффективными.
           </Fade>
           <Fade className="main__btn" direction="up" triggerOnce>
             <ScrollLink smooth to="form-mob">
@@ -55,11 +55,11 @@ const MainScreen = () => {
           </Fade>
           <div className="main-all__s__con">
             <Fade className="main-all__s__nav" direction="left" triggerOnce>
-              Тут должен быть большой заголовок
+              Ваше удобство — наш первоочередный приоритет.
             </Fade>
             <Fade className="main-all__s__second" direction="right" triggerOnce>
-              Lorem ipsum dolor sit amet consectetur. Etiam at leo egestas et
-              amet tincidunt. Justo fringilla blandit nibh rhoncus.
+              Экономьте время на поиск. Наш сервис позволяет легко и быстро
+              заказывать необходимые комплектующие.
             </Fade>
             <ScrollLink smooth to="form-mob">
               <Fade direction="up" triggerOnce>
@@ -76,14 +76,14 @@ const MainScreen = () => {
           </Fade>
           <Fade direction="up" triggerOnce>
             <h2 className="main_pc__big">
-              Search, book, and order details easily
+              Поиск и заказ деталей это быстро и легко.
             </h2>
           </Fade>
           <div className="main_pc__container">
             <Fade direction="up" triggerOnce>
               <p className="main_pc__container__second">
-                Lorem ipsum dolor sit amet consectetur. Sit porttitor vel magna
-                vulputate.
+                Поиск, бронирование и заказ комплектующих теперь стали
+                максимально удобными и эффективными.
               </p>
               <hr className="main_pc__container__separator" />
               <ScrollLink smooth to="contacts-pc">
@@ -99,12 +99,14 @@ const MainScreen = () => {
       <div className="main_s">
         <Fade direction="right" triggerOnce>
           <div className="main_s__nav">
-            <h2 className="main_s__big">Тут должен быть большой заголовок</h2>
+            <h2 className="main_s__big">
+              Ваше удобство — наш первоочередный приоритет.
+            </h2>
             <hr className="main_s__separator" />
             <div className="main-s__items">
               <p className="main_s__second">
-                Lorem ipsum dolor sit amet consectetur. Etiam at leo egestas et
-                amet tincidunt. Justo fringilla blandit nibh rhoncus.{" "}
+                Экономьте время на поиск. Наш сервис позволяет легко и быстро
+                заказывать необходимые комплектующие.{" "}
               </p>
               <ScrollLink smooth to="form_pc">
                 <button className="main_s__btn">Контакты</button>

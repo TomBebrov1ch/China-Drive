@@ -10,8 +10,8 @@ const HomePage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          "China-Drive - Ваш надежный поставщик запчастей для китайских
-          автомобилей и электромобилей"
+          China-Drive - Ваш надежный поставщик запчастей для китайских
+          автомобилей и электромобилей
         </title>
         <meta
           property="og:title"
