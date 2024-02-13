@@ -11,7 +11,7 @@ const Header = (props) => {
     <>
       <header className="header-mob">
         <div className="header">
-          <img src={logo} alt="image" className="header__img" />
+          <img src={logo} alt="logo" className="header__img" />
           <Hamburger
             toggled={props.isOpen}
             toggle={props.toggleMenu}
@@ -22,7 +22,7 @@ const Header = (props) => {
       </header>
       <header className="header-pc">
         <div class="container">
-          <img src={logo} alt="image" class="container__logo" />
+          <img src={logo} alt="logo" class="container__logo" />
           <nav className="container__links">
             <ScrollLink class="container__links__item" to="main-pc" smooth>
               Главная

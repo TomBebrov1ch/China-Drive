@@ -15,7 +15,7 @@ const FooterScreen = () => {
       <footer className="footer-mob">
         <div className="footer">
           <ScrollLink smooth to="header">
-            <img src={logo} alt="" className="footer__logo" />
+            <img src={logo} alt="logo" className="footer__logo" />
           </ScrollLink>
           <ScrollLink smooth to="header">
             <span className="footer__text">Главная</span>
@@ -37,7 +37,7 @@ const FooterScreen = () => {
       <footer className="footer_pc">
         <div className="footer-pc">
           <ScrollLink smooth to="header-pc">
-            <img src={logoPc} alt="" className="footer-pc__logo" />
+            <img src={logoPc} alt="logo" className="footer-pc__logo" />
           </ScrollLink>
           <div className="footer-pc__items">
             <ScrollLink
@@ -65,7 +65,7 @@ const FooterScreen = () => {
         <a href="https://sparkstudio.kz/home">
           <img src={Spark} alt="logo" className="spark-pc" />
         </a>
-        <img src={China} alt="" className="footer_pc__img" />
+        <img src={China} alt="china_text" className="footer_pc__img" />
       </footer>
     </>
   );
