@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import { Link as ScrollLink } from "react-scroll";
 
-import "../MainScreen/style.scss";
 import Header from "../../Components/Header/Header";
 import Menu from "../../Components/Menu/Menu";
 import Button from "../../Components/Button/Button";
@@ -10,11 +9,15 @@ import Button from "../../Components/Button/Button";
 import Car from "../../assets/image-3.webp";
 import CarPc from "../../assets/decoration.webp";
 
+import "../MainScreen/style.scss";
+
 const MainScreen = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   function toggleMenu() {
     setIsOpen(!isOpen);
   }
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflowY = "hidden";
@@ -31,10 +34,10 @@ const MainScreen = () => {
     <>
       <Header isOpen={isOpen} toggleMenu={toggleMenu} />
       {isOpen && <Menu closeMenu={() => setIsOpen(false)} />}
-      <section className="main-mob">
+      <main className="main-mob">
         <div className="main-all">
           <Fade direction="up" triggerOnce>
-            <p className="main-all__par">China Drive</p>
+            <h1 className="main-all__par">China Drive</h1>
           </Fade>
           <Fade direction="up" triggerOnce className="main-all__big">
             Поиск и заказ деталей это быстро и легко.
@@ -68,16 +71,16 @@ const MainScreen = () => {
             </ScrollLink>
           </div>
         </div>
-      </section>
-      <section className="main-pc">
+      </main>
+      <main className="main-pc">
         <div className="main_pc">
           <Fade direction="up" triggerOnce>
             <p className="main_pc__first">China Drive</p>
           </Fade>
           <Fade direction="up" triggerOnce>
-            <h2 className="main_pc__big">
+            <h1 className="main_pc__big">
               Поиск и заказ деталей это быстро и легко.
-            </h2>
+            </h1>
           </Fade>
           <div className="main_pc__container">
             <Fade direction="up" triggerOnce>
@@ -95,8 +98,8 @@ const MainScreen = () => {
         <Slide direction="right" triggerOnce>
           <img src={CarPc} alt="car" className="main-pc__img" />
         </Slide>
-      </section>
-      <div className="main_s">
+      </main>
+      <main className="main_s">
         <Fade direction="right" triggerOnce>
           <div className="main_s__nav">
             <h2 className="main_s__big">
@@ -114,7 +117,7 @@ const MainScreen = () => {
             </div>
           </div>
         </Fade>
-      </div>
+      </main>
     </>
   );
 };

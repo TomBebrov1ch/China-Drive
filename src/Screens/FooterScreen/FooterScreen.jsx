@@ -7,24 +7,24 @@ import logoPc from "../../assets/china.svg";
 import Button from "../../Components/Button/Button";
 import China from "../../assets/image-5.webp";
 
-import Spark from '../../assets/spark_logo.svg'
+import Spark from "../../assets/spark_logo.svg";
 
 const FooterScreen = () => {
   return (
     <>
-      <section className="footer-mob">
+      <footer className="footer-mob">
         <div className="footer">
           <ScrollLink smooth to="header">
             <img src={logo} alt="" className="footer__logo" />
           </ScrollLink>
           <ScrollLink smooth to="header">
-            <p className="footer__text">Главная</p>
+            <span className="footer__text">Главная</span>
           </ScrollLink>
           <ScrollLink smooth to={"contacts"}>
-            <p className="footer__text">Бренды</p>
+            <span className="footer__text">Бренды</span>
           </ScrollLink>
           <ScrollLink smooth to={"form"}>
-            <p className="footer__text">Контакты</p>
+            <span className="footer__text">Контакты</span>
           </ScrollLink>
           <ScrollLink smooth to={"form"}>
             <Button className={"сontacts-btn"} text={"Заказать звонок"} />
@@ -33,8 +33,8 @@ const FooterScreen = () => {
             <img src={Spark} alt="logo" className="spark" />
           </a>
         </div>
-      </section>
-      <section className="footer_pc">
+      </footer>
+      <footer className="footer_pc">
         <div className="footer-pc">
           <ScrollLink smooth to="header-pc">
             <img src={logoPc} alt="" className="footer-pc__logo" />
@@ -66,7 +66,7 @@ const FooterScreen = () => {
           <img src={Spark} alt="logo" className="spark-pc" />
         </a>
         <img src={China} alt="" className="footer_pc__img" />
-      </section>
+      </footer>
     </>
   );
 };

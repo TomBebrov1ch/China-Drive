@@ -9,7 +9,7 @@ import Hamburger from "hamburger-react";
 const Header = (props) => {
   return (
     <>
-      <section className="header-mob">
+      <header className="header-mob">
         <div className="header">
           <img src={logo} alt="image" className="header__img" />
           <Hamburger
@@ -19,11 +19,11 @@ const Header = (props) => {
             className="header__ham"
           />
         </div>
-      </section>
-      <section className="header-pc">
+      </header>
+      <header className="header-pc">
         <div class="container">
           <img src={logo} alt="image" class="container__logo" />
-          <div className="container__links">
+          <nav className="container__links">
             <ScrollLink class="container__links__item" to="main-pc" smooth>
               Главная
             </ScrollLink>
@@ -33,12 +33,12 @@ const Header = (props) => {
             <ScrollLink class="container__links__item" to="form_pc" smooth>
               Контакты
             </ScrollLink>
-          </div>
+          </nav>
           <ScrollLink class="container__item" to="form_pc" smooth>
             <button className="container__item__btn">Заказать звонок</button>
           </ScrollLink>
         </div>
-      </section>
+      </header>
     </>
   );
 };
