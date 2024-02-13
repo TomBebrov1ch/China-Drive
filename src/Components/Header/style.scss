@@ -49,6 +49,7 @@
       width: clamp(60px, 6.2496vw, 240px);
       height: clamp(60px, 6.2496vw, 240px);
     }
+
     &__logo:hover {
       cursor: pointer;
     }
@@ -70,11 +71,8 @@
 
       &__btn:hover {
         cursor: pointer;
-<<<<<<< HEAD
         background-color: #90051a;
-=======
-        background-color: #90051A;
->>>>>>> 2266f8f96ce05054e55d5aa6116a5ededeb4ce91
+        color: #ffffff;
       }
     }
 
