@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
@@ -13,14 +13,45 @@ const Form = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [vin, setVin] = useState("");
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState("");
+  const [model, setModel] = useState("");
+  const [year, setYear] = useState("");
+  const [brand, setBrand] = useState("");
+  const [selectedCar, setSelectedCar] = useState("");
+  const [isCarListVisible, setIsCarListVisible] = useState(false);
+  const carListRef = useRef(null);
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (carListRef.current && !carListRef.current.contains(event.target)) {
+        setIsCarListVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const Cars = [
+    "Zeekr",
+    "Changan",
+    "Volkswagen",
+    "NIO",
+    "BMW",
+    "Haval",
+    "Chery",
+    "Exeed",
+    "JAC",
+    "Geely",
+  ];
 
   const onSubmit = (data, e) => {
     e.preventDefault();
@@ -47,21 +78,15 @@ const Form = () => {
     setVin("");
   };
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(
-          "https://fakestoreapi.com/products?limit=20"
-        );
-        setProducts(response.data);
-        console.log(response.data);
-      } catch (error) {
-        setError("Could not fetch products");
-        console.error("There was an error!", error);
-      }
-    };
-    fetchProducts();
-  }, []);
+  const handleInputClick = () => {
+    setIsCarListVisible(true);
+  };
+
+  const handleCarSelect = (car) => {
+    setSelectedCar(car);
+    setBrand(car);
+    setIsCarListVisible(false);
+  };
 
   return (
     <>
@@ -167,7 +192,7 @@ const Form = () => {
                 </Fade>
               </div>
               <Fade direction="right" delay={200} triggerOnce>
-                <div>
+                <div className="form-pc__inputs__f">
                   <input
                     type="text"
                     placeholder="VIN автомобиля"
@@ -177,6 +202,58 @@ const Form = () => {
                     onChange={(event) => setVin(event.target.value)}
                     value={vin}
                     name="vin"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Год автомобиля"
+                    className="form-pc__inputs__input-s"
+                    style={{ outline: "none" }}
+                    required={true}
+                    onChange={(event) => setYear(event.target.value)}
+                    value={year}
+                    name="year"
+                  />
+                </div>
+              </Fade>
+              <Fade direction="right" delay={200} triggerOnce>
+                <div className="form-pc__inputs__t">
+                  <input
+                    type="text"
+                    placeholder="Марка автомобиля"
+                    className="form-pc__inputs__t__s"
+                    style={{ outline: "none" }}
+                    required={true}
+                    onFocus={handleInputClick}
+                    value={brand}
+                    onChange={(event) => setBrand(event.target.value)}
+                    name="brand"
+                  />
+                  {isCarListVisible && (
+                    <div
+                      ref={carListRef}
+                      className="car-list"
+                      style={{ display: isCarListVisible ? "block" : "none" }}
+                    >
+                      {Cars.map((car) => (
+                        <div
+                          key={car}
+                          onClick={() => handleCarSelect(car)}
+                          className="car-list-item"
+                        >
+                          {car}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <input
+                    type="text"
+                    placeholder="Модель автомобиля"
+                    className="form-pc__inputs__t__s"
+                    style={{ outline: "none" }}
+                    required={true}
+                    onChange={(event) => setModel(event.target.value)}
+                    value={model}
+                    name="model"
                   />
                 </div>
               </Fade>

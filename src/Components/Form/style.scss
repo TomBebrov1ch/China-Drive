@@ -79,7 +79,7 @@
       height: clamp(255px, 26.5608vw, 1020px);
       position: relative;
       left: $m128;
-      top: clamp(42.5px, 4.4268vw, 170px);
+      top: clamp(82.5px, 8.5932vw, 330px);
     }
   }
 
@@ -121,35 +121,49 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-top: $m32;
       margin-bottom: $m64;
 
       &__f {
         display: flex;
         flex-direction: row;
         gap: $m64;
+        margin-top: $m32;
       }
-
+      &__t {
+        display: flex;
+        flex-direction: column;
+        &__s {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 2px solid $dark;
+          margin-top: $m16;
+          margin-bottom: $m32;
+          padding-bottom: clamp(5px, 0.5208vw, 20px);
+          width: clamp(258px, 26.87328vw, 1032px);
+          font-family: "Gotham Pro", sans-serif;
+          color: $dark;
+          font-size: clamp(11px, 1.1457600000000001vw, 44px);
+          font-weight: 300;
+          text-align: left;
+          text-indent: clamp(3px, 0.31248vw, 12px);
+        }
+        &__s:focus {
+          border-bottom: 2px solid $red;
+        }
+      }
       &__input {
         border-top: none;
         border-left: none;
         border-right: none;
         border-bottom: 2px solid $dark;
-        width: clamp(124px, 12.915840000000001vw, 496px);
+        width: clamp(112.5px, 11.718vw, 450px);
         padding-bottom: clamp(5px, 0.5208vw, 20px);
         font-family: "Gotham Pro", sans-serif;
         color: $dark;
-        font-size: clamp(13.5px, 1.40616vw, 54px);
+        font-size: clamp(11px, 1.1457600000000001vw, 44px);
         font-weight: 300;
         text-indent: clamp(3px, 0.31248vw, 12px);
-      }
-
-      &__input::placeholder {
-        font-family: "Gotham Pro", sans-serif;
-        color: $dark;
-        font-size: clamp(14px, 1.45824vw, 56px);
-        font-weight: 300;
-        text-align: left;
       }
 
       &__input:focus {
@@ -161,13 +175,13 @@
         border-left: none;
         border-right: none;
         border-bottom: 2px solid $dark;
-        margin-top: $m64;
+        margin-top: $m16;
         margin-bottom: $m32;
         padding-bottom: clamp(5px, 0.5208vw, 20px);
-        width: 82.5%;
+        width: clamp(112.5px, 11.718vw, 450px);
         font-family: "Gotham Pro", sans-serif;
         color: $dark;
-        font-size: clamp(13.5px, 1.40616vw, 54px);
+        font-size: clamp(11px, 1.1457600000000001vw, 44px);
         font-weight: 300;
         text-align: left;
         text-indent: clamp(3px, 0.31248vw, 12px);
@@ -175,14 +189,6 @@
 
       &__input-s:focus {
         border-bottom: 2px solid $red;
-      }
-
-      &__input-s::placeholder {
-        font-family: "Gotham Pro", sans-serif;
-        color: $dark;
-        font-size: clamp(14px, 1.45824vw, 56px);
-        font-weight: 300;
-        text-align: left;
       }
     }
   }
