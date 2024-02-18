@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
-import axios from "axios";
 
 import "../Form/style.scss";
 
