@@ -50,7 +50,7 @@ const FooterScreen = () => {
             <ScrollLink
               className="footer-pc__items__text"
               smooth
-              to={"contacts"}
+              to={"contacts__pc"}
             >
               Бренды
             </ScrollLink>

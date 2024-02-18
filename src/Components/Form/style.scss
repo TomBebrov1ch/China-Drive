@@ -83,6 +83,28 @@
     }
   }
 
+  .car-list {
+    width: clamp(258px, 26.87328vw, 1032px);
+    max-height: clamp(100px, 10.416vw, 400px);
+    overflow-y: auto;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    top: clamp(26.5px, 2.76024vw, 106px);
+    text-indent: $m8;
+    &__item {
+      font-size: clamp(12px, 1.24992vw, 48px);
+      padding: $m8;
+      transition: 0.3s all;
+      font-family: "Gotham Pro", sans-serif;
+      font-weight: 300;
+    }
+    &__item:hover {
+      background-color: $red;
+      color: #ffffff;
+    }
+  }
+
   .form-pc {
     margin-top: $m128;
     flex-direction: column;

@@ -17,6 +17,8 @@ const Form = () => {
   const [brand, setBrand] = useState("");
   const [selectedCar, setSelectedCar] = useState("");
   const [isCarListVisible, setIsCarListVisible] = useState(false);
+  const [selectedCarMob, setSelectedCarMob] = useState("");
+  const [isCarListVisibleMob, setIsCarListVisibleMob] = useState(false);
   const carListRef = useRef(null);
   const {
     register,
@@ -75,21 +77,34 @@ const Form = () => {
     setName("");
     setPhone("");
     setVin("");
+    setModel("");
+    setYear("");
+    setBrand("");
   };
 
   const handleInputClick = () => {
     setIsCarListVisible(true);
   };
 
-  const handleCarSelect = (car) => {
+  const handleCarSelect = (car, event) => {
+    event.stopPropagation();
     setSelectedCar(car);
     setBrand(car);
     setIsCarListVisible(false);
   };
 
+  const handleInputClickMob = () => {
+    setIsCarListVisibleMob(!isCarListVisibleMob);
+  };
+
+  const handleCarSelectMob = (car) => {
+    setSelectedCarMob(car);
+    setIsCarListVisibleMob(false);
+  };
+
   return (
     <>
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      <div className="form">
         <section className="form-mob" id="form-mob">
           <div className="form">
             <Fade direction="left" triggerOnce></Fade>
@@ -104,7 +119,7 @@ const Form = () => {
                 нам для консультации и оформления заказа.{" "}
               </p>
             </Fade>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <Fade direction="right" triggerOnce>
                 <input
                   type="text"
@@ -136,11 +151,56 @@ const Form = () => {
                   value={vin}
                   name="vin"
                 />
+                <input
+                  type="text"
+                  placeholder="Год автомобиля"
+                  className="form__input"
+                  style={{ outline: "none" }}
+                  required={true}
+                  onChange={(event) => setVin(event.target.value)}
+                  value={vin}
+                  name="vin"
+                />
+                <input
+                  type="text"
+                  placeholder="Марка автомобиля"
+                  className="form__input"
+                  style={{ outline: "none" }}
+                  required={true}
+                  onClick={handleInputClickMob}
+                  value={brand}
+                  onChange={(event) => setBrand(event.target.value)}
+                  name="brand"
+                  readOnly
+                />
+                {isCarListVisibleMob && (
+                  <div className="form__input__menu">
+                    {Cars.map((car) => (
+                      <div
+                        key={car}
+                        onClick={() => handleCarSelectMob(car)}
+                        className="form__input__menu__items"
+                      >
+                        {car}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <input
+                  type="text"
+                  placeholder="Модель автомобиля"
+                  className="form__input"
+                  style={{ outline: "none" }}
+                  required={true}
+                  onChange={(event) => setVin(event.target.value)}
+                  value={vin}
+                  name="vin"
+                />
+              </Fade>
+              <Fade direction="left" triggerOnce>
+                <Button className={"сontacts-btn"} text={"Заказать звонок"} />
               </Fade>
             </form>
-            <Fade direction="left" triggerOnce>
-              <Button className={"сontacts-btn"} text={"Заказать звонок"} />
-            </Fade>
           </div>
         </section>
         <section className="form_pc">
@@ -159,7 +219,7 @@ const Form = () => {
                 нам для консультации и оформления заказа.{" "}
               </p>
             </Fade>
-            <form className="form-pc__inputs">
+            <form className="form-pc__inputs" onSubmit={handleSubmit(onSubmit)}>
               <div className="form-pc__inputs__f">
                 <Fade direction="right" triggerOnce>
                   <div>
@@ -190,8 +250,8 @@ const Form = () => {
                   </div>
                 </Fade>
               </div>
-              <Fade direction="right" delay={200} triggerOnce>
-                <div className="form-pc__inputs__f">
+              <div className="form-pc__inputs__f">
+                <Fade direction="right" delay={200} triggerOnce>
                   <input
                     type="text"
                     placeholder="VIN автомобиля"
@@ -202,6 +262,8 @@ const Form = () => {
                     value={vin}
                     name="vin"
                   />
+                </Fade>
+                <Fade direction="right" delay={300} triggerOnce>
                   <input
                     type="text"
                     placeholder="Год автомобиля"
@@ -212,8 +274,8 @@ const Form = () => {
                     value={year}
                     name="year"
                   />
-                </div>
-              </Fade>
+                </Fade>
+              </div>
               <Fade direction="right" delay={200} triggerOnce>
                 <div className="form-pc__inputs__t">
                   <input
@@ -237,7 +299,7 @@ const Form = () => {
                         <div
                           key={car}
                           onClick={() => handleCarSelect(car)}
-                          className="car-list-item"
+                          className="car-list__item"
                         >
                           {car}
                         </div>
@@ -265,7 +327,7 @@ const Form = () => {
             <img src={Car} alt="car" className="form_pc__img" />
           </Fade>
         </section>
-      </form>
+      </div>
     </>
   );
 };
