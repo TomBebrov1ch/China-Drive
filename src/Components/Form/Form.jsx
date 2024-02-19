@@ -169,7 +169,7 @@ const Form = (props) => {
                       {Cars.map((car) => (
                         <div
                           key={car}
-                          onTouchStart={() => handleCarSelect(car)}
+                          onTouchEnd={() => handleCarSelect(car)}
                           className="form__input__list__item"
                         >
                           {car}
