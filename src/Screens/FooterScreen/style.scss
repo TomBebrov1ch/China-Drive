@@ -19,18 +19,13 @@
     font-size: clamp(12px, 5.60736vw, 48px);
     font-weight: 400;
   }
-
-  &__logo-s {
-    width: clamp(105px, 49.0644vw, 420px);
-    height: clamp(34.5px, 16.12116vw, 138px);
-    margin-bottom: $m32mob;
-  }
 }
 
 .spark {
   width: clamp(105px, 49.0644vw, 420px);
   height: clamp(34.5px, 16.12116vw, 138px);
   margin-bottom: $m32mob;
+  margin-top: $m32mob;
 }
 
 .footer_pc {
@@ -99,7 +94,6 @@
       justify-content: space-around;
 
       &__text {
-        // margin: $m32;
         text-align: center;
         font-family: "Roboto", sans-serif;
         font-size: $font21;
@@ -111,13 +105,6 @@
       &__text:hover {
         cursor: pointer;
         color: $red;
-
-
-        &__text:hover {
-          color: $red;
-          cursor: pointer;
-
-        }
       }
     }
   }

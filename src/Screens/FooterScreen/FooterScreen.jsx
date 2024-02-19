@@ -17,14 +17,14 @@ const FooterScreen = () => {
           <ScrollLink smooth to="header">
             <img src={logo} alt="logo" className="footer__logo" />
           </ScrollLink>
-          <ScrollLink smooth to="header">
-            <span className="footer__text">Главная</span>
+          <ScrollLink className="footer__text" smooth to="header">
+            Главная
           </ScrollLink>
-          <ScrollLink smooth to={"contacts"}>
-            <span className="footer__text">Бренды</span>
+          <ScrollLink className="footer__text" smooth to={"contacts"}>
+            Бренды
           </ScrollLink>
-          <ScrollLink smooth to={"form"}>
-            <span className="footer__text">Контакты</span>
+          <ScrollLink className="footer__text" smooth to={"form"}>
+            Контакты
           </ScrollLink>
           <ScrollLink smooth to={"form"}>
             <Button className={"сontacts-btn"} text={"Заказать звонок"} />

@@ -2,13 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
+import PopUp from "../PopUp/PopUp";
 
 import "../Form/style.scss";
 
 import Button from "../Button/Button";
 import Car from "../../assets/4pc.webp";
 
-const Form = () => {
+const Form = (props) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [vin, setVin] = useState("");
@@ -17,8 +18,6 @@ const Form = () => {
   const [brand, setBrand] = useState("");
   const [selectedCar, setSelectedCar] = useState("");
   const [isCarListVisible, setIsCarListVisible] = useState(false);
-  const [selectedCarMob, setSelectedCarMob] = useState("");
-  const [isCarListVisibleMob, setIsCarListVisibleMob] = useState(false);
   const carListRef = useRef(null);
   const {
     register,
@@ -68,6 +67,7 @@ const Form = () => {
       .then(
         (result) => {
           console.log(result);
+          props.setShowPopup(true);
           reset();
         },
         (error) => {
@@ -87,20 +87,13 @@ const Form = () => {
   };
 
   const handleCarSelect = (car, event) => {
-    event.stopPropagation();
+    console.log("Выбран автомобиль:", car);
     setSelectedCar(car);
     setBrand(car);
     setIsCarListVisible(false);
   };
 
-  const handleInputClickMob = () => {
-    setIsCarListVisibleMob(!isCarListVisibleMob);
-  };
 
-  const handleCarSelectMob = (car) => {
-    setSelectedCarMob(car);
-    setIsCarListVisibleMob(false);
-  };
 
   return (
     <>
@@ -120,7 +113,7 @@ const Form = () => {
               </p>
             </Fade>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <Fade direction="right" triggerOnce>
+              <Fade className="mr" direction="right" triggerOnce>
                 <input
                   type="text"
                   placeholder="Ваше имя"
@@ -157,48 +150,53 @@ const Form = () => {
                   className="form__input"
                   style={{ outline: "none" }}
                   required={true}
-                  onChange={(event) => setVin(event.target.value)}
-                  value={vin}
-                  name="vin"
+                  onChange={(event) => setYear(event.target.value)}
+                  value={year}
+                  name="year"
                 />
-                <input
-                  type="text"
-                  placeholder="Марка автомобиля"
-                  className="form__input"
-                  style={{ outline: "none" }}
-                  required={true}
-                  onClick={handleInputClickMob}
-                  value={brand}
-                  onChange={(event) => setBrand(event.target.value)}
-                  name="brand"
-                  readOnly
-                />
-                {isCarListVisibleMob && (
-                  <div className="form__input__menu">
-                    {Cars.map((car) => (
-                      <div
-                        key={car}
-                        onClick={() => handleCarSelectMob(car)}
-                        className="form__input__menu__items"
-                      >
-                        {car}
-                      </div>
-                    ))}
-                  </div>
-                )}
-                <input
-                  type="text"
-                  placeholder="Модель автомобиля"
-                  className="form__input"
-                  style={{ outline: "none" }}
-                  required={true}
-                  onChange={(event) => setVin(event.target.value)}
-                  value={vin}
-                  name="vin"
-                />
-              </Fade>
-              <Fade direction="left" triggerOnce>
-                <Button className={"сontacts-btn"} text={"Заказать звонок"} />
+                <div className="mr__item">
+                  <input
+                    type="text"
+                    placeholder="Марка автомобиля"
+                    className="form__input"
+                    style={{ outline: "none" }}
+                    required={true}
+                    onFocus={handleInputClick}
+                    value={brand}
+                    onChange={(event) => setBrand(event.target.value)}
+                    name="brand"
+                  />
+                  {isCarListVisible && (
+                    <div
+                      ref={carListRef}
+                      className="form__input__list"
+                      style={{ display: isCarListVisible ? "block" : "none" }}
+                    >
+                      {Cars.map((car) => (
+                        <div
+                          key={car}
+                          onClick={() => handleCarSelect(car)}
+                          className="form__input__list__item"
+                        >
+                          {car}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <input
+                    type="text"
+                    placeholder="Модель автомобиля"
+                    className="form__input"
+                    style={{ outline: "none" }}
+                    required={true}
+                    onChange={(event) => setModel(event.target.value)}
+                    value={model}
+                    name="model"
+                  />
+                </div>
+                <Fade direction="left" triggerOnce>
+                  <Button className={"сontacts-btn"} text={"Заказать звонок"} />
+                </Fade>
               </Fade>
             </form>
           </div>

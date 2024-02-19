@@ -22,6 +22,7 @@
     color: $red;
   }
 
+
   &__sec {
     color: $dark;
     font-family: "Roboto", sans-serif;
@@ -32,6 +33,20 @@
     line-height: clamp(12.5px, 5.840999999999999vw, 50px);
     padding-top: $m16mob;
     margin: auto;
+  }
+
+  .mr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -50,6 +65,30 @@
     margin-bottom: $m16;
     padding-bottom: clamp(5px, 2.3364vw, 20px);
     text-indent: 10px;
+
+    &__list {
+      width: 100%;
+      max-height: clamp(100px, 10.416vw, 400px);
+      overflow-y: auto;
+      position: absolute;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      top: clamp(37.5px, 17.523vw, 150px);
+      text-indent: $m8;
+
+      &__item {
+        font-size: clamp(11px, 5.140079999999999vw, 44px);
+        padding: $m8;
+        transition: 0.3s all;
+        font-family: "Gotham Pro", sans-serif;
+        font-weight: 300;
+      }
+
+      &__item:hover {
+        background-color: $red;
+        color: #ffffff;
+      }
+    }
   }
 
   &__input::placeholder {
@@ -92,6 +131,7 @@
     border-radius: 10px;
     top: clamp(26.5px, 2.76024vw, 106px);
     text-indent: $m8;
+
     &__item {
       font-size: clamp(12px, 1.24992vw, 48px);
       padding: $m8;
@@ -99,6 +139,7 @@
       font-family: "Gotham Pro", sans-serif;
       font-weight: 300;
     }
+
     &__item:hover {
       background-color: $red;
       color: #ffffff;
@@ -151,9 +192,11 @@
         gap: $m64;
         margin-top: $m32;
       }
+
       &__t {
         display: flex;
         flex-direction: column;
+
         &__s {
           border-top: none;
           border-left: none;
@@ -170,10 +213,12 @@
           text-align: left;
           text-indent: clamp(3px, 0.31248vw, 12px);
         }
+
         &__s:focus {
           border-bottom: 2px solid $red;
         }
       }
+
       &__input {
         border-top: none;
         border-left: none;

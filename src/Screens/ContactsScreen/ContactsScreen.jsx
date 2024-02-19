@@ -1,13 +1,18 @@
+import { useState } from "react";
 import "../ContactsScreen/style.scss";
 import redCar from "../../assets/Group-437.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Fade } from "react-awesome-reveal";
+import PopUp from "../../Components/PopUp/PopUp";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
+import "swiper/css/autoplay";
 
-import changan from "../../assets/changan-1.webp";
+
 import Form from "../../Components/Form/Form";
 
+import changan from "../../assets/changan-1.webp";
 import cPC from "../../assets/cPc.webp";
 import wol from "../../assets/wol.webp";
 import zeekr from "../../assets/Zeekr.webp";
@@ -20,6 +25,7 @@ import jac from "../../assets/logo (1) 1.svg";
 import geely from "../../assets/logo (2) 1.svg";
 
 const ContactsScreen = () => {
+  const [showPopUp, setShowPopUp] = useState(false);
   return (
     <>
       <section className="contacts-mob">
@@ -32,6 +38,11 @@ const ContactsScreen = () => {
               className="contacts__con__swiper"
               slidesPerView={1}
               spaceBetween={64}
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
             >
               <SwiperSlide>
                 <div className="contacts__con__swiper__car">
@@ -113,6 +124,11 @@ const ContactsScreen = () => {
             className="contacts__pc__swiper swiper"
             slidesPerView={4}
             spaceBetween={64}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
           >
             <SwiperSlide>
               <div className="contacts__pc__nav">
@@ -167,7 +183,8 @@ const ContactsScreen = () => {
           </Swiper>
         </div>
       </section>
-      <Form />
+      {showPopUp && <PopUp setShowPopup={setShowPopUp} />}
+      <Form setShowPopup={setShowPopUp} showPopUp={showPopUp} />
     </>
   );
 };
