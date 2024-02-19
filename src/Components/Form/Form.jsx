@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import emailjs from "@emailjs/browser";
-import PopUp from "../PopUp/PopUp";
 
 import "../Form/style.scss";
 
@@ -169,7 +168,7 @@ const Form = (props) => {
                       {Cars.map((car) => (
                         <div
                           key={car}
-                          onTouchEnd={() => handleCarSelect(car)}
+                          onMouseDown={() => handleCarSelect(car)}
                           className="form__input__list__item"
                         >
                           {car}
