@@ -93,8 +93,6 @@ const Form = (props) => {
     setIsCarListVisible(false);
   };
 
-
-
   return (
     <>
       <div className="form">
@@ -167,15 +165,11 @@ const Form = (props) => {
                     name="brand"
                   />
                   {isCarListVisible && (
-                    <div
-                      ref={carListRef}
-                      className="form__input__list"
-                      style={{ display: isCarListVisible ? "block" : "none" }}
-                    >
+                    <div ref={carListRef} className="form__input__list">
                       {Cars.map((car) => (
                         <div
                           key={car}
-                          onClick={() => handleCarSelect(car)}
+                          onTouchStart={() => handleCarSelect(car)}
                           className="form__input__list__item"
                         >
                           {car}

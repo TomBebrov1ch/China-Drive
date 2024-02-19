@@ -51,7 +51,8 @@
     height: clamp(63.5px, 29.672279999999997vw, 254px);
     margin-top: $m32mob;
 
-    &__img {}
+    &__img {
+    }
   }
 }
 
@@ -88,6 +89,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: auto;
     }
 
     &__img {

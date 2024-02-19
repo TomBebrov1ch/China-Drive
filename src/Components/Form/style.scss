@@ -22,7 +22,6 @@
     color: $red;
   }
 
-
   &__sec {
     color: $dark;
     font-family: "Roboto", sans-serif;
@@ -73,7 +72,7 @@
       position: absolute;
       background-color: #f9f9f9;
       border-radius: 10px;
-      top: clamp(37.5px, 17.523vw, 150px);
+      top: clamp(35px, 16.354799999999997vw, 140px);
       text-indent: $m8;
 
       &__item {
