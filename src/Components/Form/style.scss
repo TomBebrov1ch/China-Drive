@@ -121,6 +121,16 @@
     }
   }
 
+  .num {
+    font-family: "Gotham Pro", sans-serif;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    color: $dark;
+    text-decoration: none;
+    margin-top: $m32;
+  }
+  .num:hover {
+    text-decoration: underline;
+  }
   .car-list {
     width: clamp(258px, 26.87328vw, 1032px);
     max-height: clamp(100px, 10.416vw, 400px);

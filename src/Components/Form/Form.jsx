@@ -312,6 +312,9 @@ const Form = (props) => {
               <button type="submit" className="container__item__btn">
                 Заказать звонок
               </button>
+              <a href="tel:+77066876817" className="num">
+                +7 (706) 687 68 17
+              </a>
             </form>
           </div>
           <Fade direction="right" triggerOnce>

@@ -29,6 +29,9 @@ const FooterScreen = () => {
           <ScrollLink smooth to={"form"}>
             <Button className={"сontacts-btn"} text={"Заказать звонок"} />
           </ScrollLink>
+          <a href="tel:+77066876817" className="num-m">
+            +7 (706) 687 68 17
+          </a>
           <a href="https://sparkstudio.kz/home">
             <img src={Spark} alt="logo" className="spark" />
           </a>

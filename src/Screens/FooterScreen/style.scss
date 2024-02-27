@@ -32,6 +32,15 @@
   display: none;
 }
 
+.num-m {
+  font-family: "Gotham Pro", sans-serif;
+  font-size: $font21mob;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: $m8mob;
+  margin-bottom: $m8mob;
+}
+
 @media screen and (min-width: 1024px) {
   .footer-mob {
     display: none;
